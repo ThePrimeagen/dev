@@ -1,0 +1,19 @@
+- name: New SSH Keys for Ansible
+  hosts: localhost
+  vars:
+    ssh_key_filename: id_rsa_myproject
+  tasks:
+    - name: "Create .ssh"
+      ansible.builtin.file:
+        path: "~/.ssh"
+        state: directory
+        mode: '0755'
+
+    - name: generate SSH key "{{ssh_key_filename}}"
+      openssh_keypair:
+        path: "~/.ssh/{{ssh_key_filename}}"
+        type: rsa
+        size: 4096
+        state: present
+        force: no
+

@@ -1,0 +1,24 @@
+- hosts: localhost
+  vars:
+    username: "theprimeagen"
+    ssh_key_filename: "id_theprimeagen_rsa"
+  tasks:
+  - name: "Install required software"
+    apt:
+      name: "{{ packages }}"
+      state: present
+    vars:
+      packages:
+      - git
+      - docker
+      - docker-compose
+      - python3-pip
+  - name: Ensure group "docker" exists with correct gid
+    ansible.builtin.group:
+      name: docker
+      state: present
+  - name: Add user to docker group
+    ansible.builtin.user:
+      name: "{{ username }}"
+      groups: docker
+      append: true
