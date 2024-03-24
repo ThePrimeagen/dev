@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+alias asdf="setxkbmap real-prog-dvorak"
+
+setxkbmap -option caps:ctrl_modifier
+

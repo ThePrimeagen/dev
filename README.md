@@ -1,7 +1,11 @@
 ## How To Setup Env
 1. Get ansible on your system asap.  I'll make this process easier and eventually will have dev.theprimeagen.com just emit out this little script so its simple to start with
 
+Run this in the directory you wish to clone down theprimeagen dev
+
 ```
+mkdir personal
+cd personal
 curl https://raw.githubusercontent.com/ThePrimeagen/dev/master/setup | sh
 ```
 
