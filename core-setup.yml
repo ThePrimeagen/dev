@@ -2,6 +2,7 @@
   vars:
     username: "theprimeagen"
     ssh_key_filename: "id_theprimeagen_rsa"
+  become: true
   tasks:
   - name: "Install required software"
     apt:
@@ -22,3 +23,5 @@
       name: "{{ username }}"
       groups: docker
       append: true
+  - name: Setup keyboard
+    ansible.builtin.command: ./cmd/keyboard

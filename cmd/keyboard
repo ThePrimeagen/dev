@@ -1,6 +1,13 @@
 #!/usr/bin/env bash
 
+if [ ! -f /usr/share/X11/xkb/symbols/real-prog-dvorak ]; then
+	echo "real-prog-dvorak doesn't exist, copying over"
+	cp ./real-prog-dvorak /usr/share/X11/xkb/symbols
+fi
+
+
 if grep -q "real-prog-dvorak" /usr/share/X11/xkb/rules/evdev.xml; then
+	echo "evdev.xml already has real-prog-dvorak layout definition"
 	exit 0
 fi
 
@@ -35,3 +42,4 @@ $dvorak_env
 $remaining
 " > /usr/share/X11/xkb/rules/evdev.xml
 
+echo "don't forget to log out to let these changes take effect"
