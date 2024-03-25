@@ -1,6 +1,7 @@
 - hosts: localhost
   vars:
     username: "theprimeagen"
+    email: "theprimeagen@gmail.com"
     ssh_key_filename: "id_theprimeagen_rsa"
   become: true
   tasks:
@@ -25,3 +26,18 @@
       append: true
   - name: Setup keyboard
     ansible.builtin.command: ./cmd/keyboard
+
+  ## For whatever reason this is not being considered...
+  # I am not getting user name or email set :(
+  # ... not super important but would love this to work so i don't 
+  # discover this at some point in the future
+  - name: user.name for git config
+    community.general.git_config:
+      name: user.name
+      scope: global
+      value: "{{ username }}"
+  - name: user.email for git config
+    community.general.git_config:
+      name: user.email
+      scope: global
+      value: "{{ email }}"
