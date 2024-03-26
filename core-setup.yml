@@ -3,9 +3,13 @@
     username: "theprimeagen"
     email: "theprimeagen@gmail.com"
     ssh_key_filename: "id_theprimeagen_rsa"
-  become: true
+    config: "{{ lookup('ansible.builtin.env', 'XDG_CONFIG') }}"
+    home: "{{ lookup('ansible.builtin.env', 'HOME') }}"
+    zsh_dependencies: []
   tasks:
+
   - name: "Install required software"
+    become: true
     apt:
       name: "{{ packages }}"
       state: present
@@ -15,29 +19,60 @@
       - docker
       - docker-compose
       - python3-pip
+
   - name: Ensure group "docker" exists with correct gid
+    become: true
     ansible.builtin.group:
       name: docker
       state: present
+
   - name: Add user to docker group
+    become: true
     ansible.builtin.user:
       name: "{{ username }}"
       groups: docker
       append: true
+
   - name: Setup keyboard
+    become: true
     ansible.builtin.command: ./cmd/keyboard
 
-  ## For whatever reason this is not being considered...
-  # I am not getting user name or email set :(
-  # ... not super important but would love this to work so i don't 
-  # discover this at some point in the future
   - name: user.name for git config
+    become_user: "{{ username }}"
     community.general.git_config:
       name: user.name
       scope: global
       value: "{{ username }}"
+
   - name: user.email for git config
+    become_user: "{{ username }}"
     community.general.git_config:
       name: user.email
       scope: global
       value: "{{ email }}"
+
+  - name: Ensure Zsh with dependencies are installed
+    apt:
+      name: "{{ ['zsh'] + zsh_dependencies }}"
+      state: present
+      update_cache: yes
+    become: true
+
+  - name: Ensure zsh is the default shell
+    user:
+      name: "{{ username }}"
+      shell: "/usr/bin/zsh"
+    become: true
+
+  - name: Download Oh My Zsh installation script
+      get_url:
+        url: https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
+        dest: /tmp/install_ohmyzsh.sh
+
+  - name: Run Oh My Zsh installation script
+      command: sh /tmp/install_ohmyzsh.sh --unattended
+      register: ohmyzsh_result
+      failed_when: "'FAILED' in ohmyzsh_result.stderr"
+
+  # This will copy over all my dev files.
+  - include: dev-env.yml

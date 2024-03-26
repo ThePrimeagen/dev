@@ -1,0 +1,10 @@
+- hosts: localhost
+  vars:
+    config: "{{ lookup('ansible.builtin.env', 'XDG_CONFIG') }}"
+    home: "{{ lookup('ansible.builtin.env', 'HOME') }}"
+  tasks:
+    - name: Include task list in play
+      ansible.builtin.import_tasks:
+        file: dev-env.yml
+
+
