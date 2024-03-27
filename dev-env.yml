@@ -1,17 +1,8 @@
-- name: Copy over the zsh_profile
+- name: Copy dev env
   ansible.builtin.copy:
-    src: ./zsh/.zsh_profile
-    dest: "{{ home }}/.zsh_profile"
-    owner: theprimeagen
-    group: theprimeagen
+    src: ./env/
+    dest: "{{ config }}"
+    owner: "{{ username }}"
+    group: "{{ username }}"
     mode: '0755'
-
-- name: Copy over the zshrc
-  ansible.builtin.copy:
-    src: ./zsh/.zshrc
-    dest: "{{ home }}/.zshrc"
-    owner: theprimeagen
-    group: theprimeagen
-    mode: '0755'
-
 

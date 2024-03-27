@@ -24,10 +24,16 @@ curl https://raw.githubusercontent.com/ThePrimeagen/dev/master/setup | sh
 1. tmux
 1. tmux-sessionizer
 
+## Things Needing Investigation
+change shell for the user forever.  i don't want to have to remember chsh -s $(which zsh)
+
+I currently solve this by having a once execute post script...
+
 ## Done
 
 1. Install docker and ensure user crap is done 
 1. cp over keyboard config and layout into xkb
+1. zsh
 
 ## Ponderings
 Should I have languages be installed or just assume those are things i'll let myself figure out later.  Such as installing `n` and node or golang.  Rust is pretty easy because it self updates 
