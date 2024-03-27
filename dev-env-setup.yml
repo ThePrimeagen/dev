@@ -1,6 +1,6 @@
 - hosts: localhost
   vars:
-    config: "{{ lookup('ansible.builtin.env', 'XDG_CONFIG') }}"
+    config: "{{ lookup('ansible.builtin.env', 'XDG_CONFIG_HOME') }}"
     home: "{{ lookup('ansible.builtin.env', 'HOME') }}"
     username: "{{ lookup('ansible.builtin.env', 'USER') }}"
   tasks:
