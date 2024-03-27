@@ -25,9 +25,7 @@ curl https://raw.githubusercontent.com/ThePrimeagen/dev/master/setup | sh
 1. tmux-sessionizer
 
 ## Things Needing Investigation
-change shell for the user forever.  i don't want to have to remember chsh -s $(which zsh)
-
-I currently solve this by having a once execute post script...
+I did not log out / back in to see if zsh shell stuck upon chsh via ansible...
 
 ## Done
 
