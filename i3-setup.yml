@@ -1,0 +1,26 @@
+# I recognize this is shitty.  please don't create an issue telling me its
+# shitty.  But if you want to create the "better" way of doing this.  feel
+# free, but i want some docs :)  I didn't understand some of the repos that
+# came with MANY tasks just to get i3 installed
+- hosts: localhost
+  vars:
+  tasks:
+    - name: Download the i3wm signing key (tarball) from sur5r.net
+      ansible.builtin.get_url:
+        url: https://debian.sur5r.net/i3/pool/main/s/sur5r-keyring/sur5r-keyring_2024.03.04_all.deb 
+        dest: /tmp/keyring.deb 
+        checksum: sha256:f9bb4340b5ce0ded29b7e014ee9ce788006e9bbfe31e96c09b2118ab91fca734
+
+    - name: Return motd to registered var
+      become: true
+      ansible.builtin.command: apt install /tmp/keyring.deb
+
+    - name: Return motd to registered var
+      become: true
+      ansible.builtin.command: echo "deb http://debian.sur5r.net/i3/ $(grep '^DISTRIB_CODENAME=' /etc/lsb-release | cut -f2 -d=) universe" | tee /etc/apt/sources.list.d/sur5r-i3.list
+
+    - name: Install i3
+      become: true
+      ansible.builtin.apt:
+        name: i3
+        update_cache: yes
