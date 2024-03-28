@@ -1,0 +1,75 @@
+---
+# Direct copy / pasta from 
+# https://codeberg.org/ansible/i3wm/src/branch/main/tasks/i3wm-install.yml
+
+# https://i3wm.org/docs/repositories.html
+# Install i3wm. Use the non-official Ubuntu repos from sur5r.net for Bionic
+- name: Install i3wm from sur5r on Bionic
+  when: ansible_distribution_release == "jammy"
+  block:
+
+    - name: Download the i3wm signing key (tarball) from sur5r.net
+      ansible.builtin.get_url:
+        url: "{{ sur5r.keyring.tarball }}"
+        dest: "{{ sur5r.keyring.download }}"
+        checksum: "sha256:{{ sur5r.keyring.sha256_ref }}"
+
+    - name: Make sure unpack directory exists
+      ansible.builtin.file:
+        path: "{{ sur5r.keyring.unpack_dir }}"
+        state: directory
+        owner: "{{ username }}"
+        group: "{{ username }}"
+
+    - name: Unpack the signing key tarball
+      ansible.builtin.unarchive:
+        remote_src: yes
+        src: "{{ sur5r.keyring.download }}"
+        dest: "{{ sur5r.keyring.unpack_dir }}"
+        owner: "{{ username }}"
+        group: "{{ username }}"
+        extra_opts: "--strip-components=1"
+
+    # might be wise to deprecate apt-key soonish:
+    # https://github.com/docker/docker.github.io/issues/11625
+    - name: Add i3wm signing key to keyring
+      ansible.builtin.apt_key:
+        file: "{{ home }}/.cache/i3wm-keyring/keyrings/sur5r-keyring.gpg"
+        state: present
+
+    - name: "Add the i3wm sur5r apt repo"
+      ansible.builtin.apt_repository:
+        repo: "deb http://debian.sur5r.net/i3/ {{ ansible_distribution_release }} universe"
+        state: present
+        filename: i3wm-sur5r
+  # END OF BLOCK
+
+
+# No need to use sur5r repo on Jammy, since Ubuntu's own repos are completely up-to-date
+# with latest i3wm release (v4.20.1 at time of writing)
+- name: Install i3 and dependencies
+  ansible.builtin.apt:
+    name:
+      - i3
+      - i3status
+      - ubuntu-drivers-common
+      - mesa-utils
+      - mesa-utils-extra
+      - numlockx               # enable NumLock in X11 sessions
+      - xautolock              # program launcher for idle X sessions
+      - xorg
+      # it seems xserver-xorg clashes if there is already an existing desktop
+      # (such as Ubuntu Desktop image instead of Server)
+      # xserver-xorg : Depends: xserver-xorg-core (>= 2:1.17.2-2)
+      # - xserver-xorg # skip it? not sure how  that works for Server installs...
+      # further, attempting to install xserver-xorg-core would lead to uninstall
+      # of many other xserver-xorg-* packages, likely breaking all kinds of stuff
+      # perhaps take a look at digimokan's ansible role for inspiration?
+      # https://github.com/digimokan/ans_role_config_xorg
+      - wmctrl                 # control an EWMH/NetWM compatible X Window Manager
+      - dex
+      - xinit
+      # important to install urxvt terminal at this point, since this will be the default term invoked via our i3 config
+      - rxvt-unicode           # RXVT-like terminal emulator with Unicode and 256-color support
+    state: present
+

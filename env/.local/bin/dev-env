@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+(
+cd ~/personal/dev
+ansible-playbook dev-env-setup.yml
+hash -r
+)
