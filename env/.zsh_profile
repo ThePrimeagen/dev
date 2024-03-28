@@ -8,10 +8,12 @@ done
 # source /usr/share/doc/fzf/examples/key-bindings.zsh
 # source /usr/share/doc/fzf/examples/completion.zsh
 
-export GOPATH=$HOME/go
+export GOPATH=/usr/local/go/bin
 export GIT_EDITOR=$VIM
 export DENO_INSTALL="$HOME/.deno"
 export N_PREFIX="$HOME/.local/n"
+export FLYCTL_INSTALL="/home/theprimeagen/.fly"
+export PATH="$FLYCTL_INSTALL/bin:$PATH"
 
 # Where should I put you?
 bindkey -s ^f "tmux-sessionizer\n"
@@ -42,8 +44,9 @@ addToPathFront $HOME/.local/.npm-global/bin
 addToPathFront $HOME/.local/scripts
 addToPathFront $HOME/.local/bin
 addToPathFront $HOME/.local/n/bin/
+# do i need this one?
 addToPathFront $HOME/.local/go/bin
-addToPathFront $HOME/go/bin
+addToPathFront /usr/local/go/bin
 addToPathFront $HOME/personal/sumneko/bin
 addToPathFront $HOME/.deno/bin
 
