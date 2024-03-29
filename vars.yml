@@ -1,0 +1,6 @@
+username: "theprimeagen"
+email: "theprimeagen@gmail.com"
+ssh_key_filename: "id_theprimeagen_rsa"
+config: "{{ lookup('ansible.builtin.env', 'XDG_CONFIG') }}"
+home: "{{ lookup('ansible.builtin.env', 'HOME') }}"
+

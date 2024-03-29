@@ -1,12 +1,9 @@
 - hosts: localhost
-  vars:
-    username: "theprimeagen"
-    email: "theprimeagen@gmail.com"
-    ssh_key_filename: "id_theprimeagen_rsa"
-    config: "{{ lookup('ansible.builtin.env', 'XDG_CONFIG') }}"
-    home: "{{ lookup('ansible.builtin.env', 'HOME') }}"
-    zsh_dependencies: []
   tasks:
+
+  - name: Include main vars
+    ansible.builtin.include_vars:
+      file: vars.yml
 
   - name: "Install required software"
     become: true
@@ -50,6 +47,3 @@
       name: user.email
       scope: global
       value: "{{ email }}"
-
-  # This will copy over all my dev files.
-  - include: dev-env.yml

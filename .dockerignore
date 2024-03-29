@@ -2,3 +2,5 @@
 test
 **/main
 fly.toml
+cmd
+*.yml

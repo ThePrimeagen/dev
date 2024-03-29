@@ -2,6 +2,6 @@
 
 (
 cd ~/personal/dev
-ansible-playbook dev-env-setup.yml
+ansible-playbook dev-env.yml
 hash -r
 )

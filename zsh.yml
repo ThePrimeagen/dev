@@ -6,9 +6,7 @@
     config: "{{ lookup('ansible.builtin.env', 'XDG_CONFIG') }}"
     home: "{{ lookup('ansible.builtin.env', 'HOME') }}"
     zsh_dependencies: []
-  import_playbook: i3-setup.yml
   tasks:
-
   - name: Ensure Zsh with dependencies are installed
     apt:
       name: "{{ ['zsh'] + zsh_dependencies }}"
