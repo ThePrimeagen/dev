@@ -12,16 +12,12 @@ Run this in the directory you wish to clone down theprimeagen dev
 ```
 mkdir personal
 cd personal
-curl https://raw.githubusercontent.com/ThePrimeagen/dev/master/setup | sh
+curl https://raw.githubusercontent.com/ThePrimeagen/dev/master/resources/setup | sh
 ```
 
 ## TODO
-
 1. neovim
-1. neovim-local-dev
-1. core utils that i love
-1. tmux
-1. tmux-sessionizer
+1. make a small subdomain off of theprimeagen.com with the aforementioned setup script that way i can do something like `curl https://dev.theprimeagen.com | sh`.  Tiz would be cooler
 
 ## Things Needing Investigation
 I did not log out / back in to see if zsh shell stuck upon chsh via ansible...
@@ -32,6 +28,9 @@ I did not log out / back in to see if zsh shell stuck upon chsh via ansible...
 1. cp over keyboard config and layout into xkb
 1. zsh
 1. i3 -- pretty shotty playbook, but it works.
+1. core utils that i love
+1. tmux
+1. tmux-sessionizer
 
 ## Ponderings
 Should I have languages be installed or just assume those are things i'll let myself figure out later.  Such as installing `n` and node or golang.  Rust is pretty easy because it self updates 
