@@ -1,0 +1,27 @@
+- hosts: localhost
+  tasks:
+    - name: fzf
+      become: true
+      apt:
+        name: fzf
+        state: present
+        update_cache: yes
+
+    - name: ripgrep
+      become: true
+      apt:
+        name: ripgrep
+        state: present
+
+    - name: xclip
+      become: true
+      apt:
+        name: xclip
+        state: present
+
+    - name: jq
+      become: true
+      apt:
+        name: jq
+        state: present
+
