@@ -2,7 +2,7 @@
 
 if [ ! -f /usr/share/X11/xkb/symbols/real-prog-dvorak ]; then
 	echo "real-prog-dvorak doesn't exist, copying over"
-	cp ./real-prog-dvorak /usr/share/X11/xkb/symbols
+	cp ./resources/real-prog-dvorak /usr/share/X11/xkb/symbols
 fi
 
 

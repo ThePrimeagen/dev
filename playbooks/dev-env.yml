@@ -6,7 +6,7 @@
 
     - name: Copy dev env
       ansible.builtin.copy:
-        src: ./env/
+        src: ../env/
         dest: "{{ home }}"
         owner: "{{ username }}"
         group: "{{ username }}"
