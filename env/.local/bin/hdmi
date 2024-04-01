@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+xrandr --output eDP-1 --scale-from 3840x2160 --scale 1920x1080
+xrandr --output HDMI-1 --off
+xrandr --output HDMI-1 --auto
+
+

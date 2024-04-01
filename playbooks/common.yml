@@ -1,27 +1,15 @@
 - hosts: localhost
   tasks:
-    - name: fzf
-      become: true
-      apt:
-        name: fzf
-        state: present
-        update_cache: yes
-
-    - name: ripgrep
-      become: true
-      apt:
-        name: ripgrep
-        state: present
-
-    - name: xclip
-      become: true
-      apt:
-        name: xclip
-        state: present
-
-    - name: jq
-      become: true
-      apt:
-        name: jq
-        state: present
-
+  - name: "Install all the software"
+    become: true
+    apt:
+      name: "{{ packages }}"
+      state: present
+    vars:
+      packages:
+      - fzf
+      - ripgrep
+      - pavucontrol
+      - xclip
+      - jq
+      - tldr
