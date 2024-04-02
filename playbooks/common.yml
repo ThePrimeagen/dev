@@ -1,9 +1,10 @@
+# I am struggling with getting the list to work
 - hosts: localhost
   tasks:
-  - name: "Install all the software"
+  - name: All the libraries i love
     become: true
     apt:
-      name: "{{ packages }}"
+      name: fzf
       state: present
     vars:
       packages:
@@ -13,3 +14,7 @@
       - xclip
       - jq
       - tldr
+      - shutter
+    loop_control:
+      loop_var: package
+    with_items: "{{ packages }}"

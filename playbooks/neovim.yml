@@ -6,12 +6,12 @@
       file: vars.yml
 
   - name: Remove old versions of neovim
-     ansible.builtin.file:
+    ansible.builtin.file:
        path: "{{ home }}/neovim"
        state: absent
 
   - name: Clone neovim
-     ansible.builtin.git:
+    ansible.builtin.git:
        repo: https://github.com/neovim/neovim.git
        dest: "{{ home }}/neovim"
        depth: 1
