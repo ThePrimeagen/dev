@@ -49,4 +49,5 @@ addToPathFront $HOME/.local/go/bin
 addToPathFront /usr/local/go/bin
 addToPathFront $HOME/personal/sumneko/bin
 addToPathFront $HOME/.deno/bin
+addToPath $HOME/.cargo/bin
 

@@ -26,6 +26,8 @@
       packages:
       - cmake
       - gettext
+      - lua5.1
+      - liblua5.1-0-dev
 
   - name: Clone Personal Repos
     ansible.builtin.git:
@@ -45,3 +47,16 @@
     ansible.builtin.command: make CMAKE_BUILD_TYPE=RelWithDebInfo
     args:
       chdir: "{{ home }}/neovim"
+
+  - name: Rust... btw
+    ansible.builtin.shell:
+      cmd: curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+  - name: stylua
+    ansible.builtin.shell:
+      cmd: cargo install stylua
+
+  - name: stylua
+    ansible.builtin.shell:
+      chdir: "{{ dev }}"
+      cmd: ./resources/luarocks
