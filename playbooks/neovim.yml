@@ -43,6 +43,12 @@
       loop_var: repo
     with_items: "{{ repos }}"
 
+  - name: Plenary
+    ansible.builtin.git:
+      repo: "https://github.com/nvim-lua/plenary.nvim.git"
+      dest: "{{ personal }}/plenary.nvim"
+      depth: 1
+
   - name: Neovim Make Install
     become: true
     ansible.builtin.command: sudo make install
