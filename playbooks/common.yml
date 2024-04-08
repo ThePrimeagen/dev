@@ -3,11 +3,8 @@
   tasks:
   - name: All the libraries i love
     become: true
-    apt:
-      name: fzf
-      state: present
-    vars:
-      packages:
+    ansible.builtin.apt:
+      pkg:
       - fzf
       - ripgrep
       - pavucontrol
@@ -15,6 +12,3 @@
       - jq
       - tldr
       - shutter
-    loop_control:
-      loop_var: package
-    with_items: "{{ packages }}"
