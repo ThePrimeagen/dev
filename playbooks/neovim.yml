@@ -7,27 +7,27 @@
 
   - name: Remove old versions of neovim
     ansible.builtin.file:
-       path: "{{ home }}/neovim"
-       state: absent
+      path: "{{ home }}/neovim"
+      state: absent
 
   - name: Clone neovim
     ansible.builtin.git:
-       repo: https://github.com/neovim/neovim.git
-       dest: "{{ home }}/neovim"
-       depth: 1
-       version: stable
+      repo: https://github.com/neovim/neovim.git
+      dest: "{{ home }}/neovim"
+      depth: 1
+      version: stable
 
-  - name: "Install neovim deps"
+  - name: Install neovim deps
     become: true
-    apt:
+    ansible.builtin.apt:
       name: "{{ packages }}"
       state: present
     vars:
       packages:
-      - cmake
-      - gettext
-      - lua5.1
-      - liblua5.1-0-dev
+        - cmake
+        - gettext
+        - lua5.1
+        - liblua5.1-0-dev
 
   - name: Clone Personal Repos
     ansible.builtin.git:
@@ -36,9 +36,9 @@
       depth: 1
     vars:
       repos:
-      - harpoon
-      - vim-apm
-      - vim-with-me
+        - harpoon
+        - vim-apm
+        - vim-with-me
     loop_control:
       loop_var: repo
     with_items: "{{ repos }}"
@@ -51,26 +51,28 @@
 
   - name: Neovim Make Install
     become: true
-    ansible.builtin.command: sudo make install
+    ansible.builtin.command:
+      cmd: sudo make install
     args:
       chdir: "{{ home }}/neovim"
 
-  - name: Rust... btw
+  - name: Install Rust
     become: true
     ansible.builtin.shell:
-      cmd: curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+      cmd: curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 
-  - name: stylua
+  - name: Install stylua
     ansible.builtin.shell:
-      cmd: cargo install stylua
+      cmd: "{{ ansible_env.HOME }}/.cargo/bin/cargo install stylua"
 
-  - name: luarocks
+  - name: Run luarocks
     become: true
     ansible.builtin.shell:
       chdir: "{{ dev }}"
       cmd: ./resources/luarocks
 
-  - name: luacheck
+  - name: Install luacheck
     become: true
     ansible.builtin.shell:
       cmd: luarocks install luacheck
+

@@ -13,7 +13,7 @@
     vars:
       packages:
       - git
-      - docker
+      - docker.io
       - docker-compose
       - python3-pip
 
@@ -29,10 +29,6 @@
       name: "{{ username }}"
       groups: docker
       append: true
-
-  - name: Setup keyboard
-    become: true
-    ansible.builtin.command: ./cmd/keyboard
 
   - name: user.name for git config
     become_user: "{{ username }}"
