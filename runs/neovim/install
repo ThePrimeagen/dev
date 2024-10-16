@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+version="v0.10.2"
+if [ ! -z $NVIM_VERSION ]; then
+    version="$NVIM_VERSION"
+fi
+
+echo "version: \"$version\""
+
+if [[ -d ~/neovim ]]; then
+    pushd ~/neovim
+    git fetch --all
+    git checkout $version
+
+    make clean
+    make CMAKE_BUILD_TYPE=RelWithDebInfo
+    sudo make install
+
+    popd
+else
+    echo "NEOVIM DOES NOT EXIST, please run \"dev\" command to install neovim"
+fi
+

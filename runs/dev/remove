@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+# rust btw
+rustup self uninstall
+rm -rf ~/.cargo ~/.rustup
+
+# neovim btw
+rm -rf $HOME/neovim

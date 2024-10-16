@@ -1,0 +1,82 @@
+#!/usr/bin/env bash
+remove="0"
+grep=""
+env="0"
+dry_run="0"
+
+# Loop until all arguments are processed
+while [[ $# -gt 0 ]]; do
+
+    echo "ARG: \"$1\""
+    if [[ "$1" == "--env" ]]; then
+        env="1"
+    elif [[ "$1" == "--dry" ]]; then
+        dry_run="1"
+    elif [[ "$1" == "--remove" ]]; then
+        remove="1"
+    else
+        grep="$1"
+    fi
+
+    # Shift to the next argument
+    shift
+done
+echo "RUN: env: $env -- remove: $remove -- grep: $grep -- dry: $dry_run"
+
+run_scripts() {
+    runs_dir=`find $DEV_ENV_HOME/runs -mindepth 1 -maxdepth 1 -type d`
+    if [ ! -z "$grep" ]; then
+        runs_dir=`echo $runs_dir | grep $grep`
+    fi
+
+    for s in runs_dir; do
+        script="install"
+        if [[ $remove -eq "1" ]]; then
+            script="remove"
+        fi
+
+        script=${runs_dir%/}/${script}
+        echo "running script: $script"
+        $script
+    done
+}
+
+remove_files() {
+    pushd $1
+    (
+        configs=`find . -mindepth 1 -maxdepth 1 -type d`
+        echo "removing: $configs"
+        for c in $configs; do
+            directory=${2%/}/${c}
+            echo "    removing: $directory"
+            if [[ $dry_run == "0" ]]; then
+                rm -rf $directory
+            fi
+        done
+        cp -r ./* $2
+    )
+    popd
+}
+
+run_env() {
+    pushd $DEV_ENV_HOME
+    echo "removing ~config"
+    remove_files env/.config $XDG_CONFIG_HOME
+
+    echo "removing ~local"
+    remove_files env/.local $HOME/.local
+
+    echo "copying zsh"
+    if [[ $dry_run == "0" ]]; then
+        cp $DEV_ENV_HOME/env/.zshrc ~/.zshrc
+        cp $DEV_ENV_HOME/env/.zsh_profile ~/.zsh_profile
+    fi
+
+    popd
+}
+
+if [[ "$env" == "1" ]]; then
+    run_env
+else
+    run_scripts
+fi

@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+# rust btw
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+# lua btw
+cargo install stylua
+$DEV_ENV_HOME/resources/luarocks
+luarocks install luacheck
+
+# neovim btw
+rm -rf $HOME/neovim
+git clone https://github.com/neovim/neovim.git $HOME/neovim
+sudo apt -y install cmake gettext lua5.1 liblua5.1-0-dev
+
+git clone https://github.com/ThePrimeagen/harpoon.git $HOME/personal/harpoon
+git clone https://github.com/ThePrimeagen/vim-apm.git $HOME/personal/vim-apm
+git clone https://github.com/ThePrimeagen/vim-with-me.git $HOME/personal/vim-with-me
+git clone https://github.com/ThePrimeagen/vim-arcade.git $HOME/personal/vim-arcade
+git clone https://github.com/nvim-lua/plenary.nvim.git $HOME/personal/plenary
