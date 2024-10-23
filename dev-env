@@ -1,0 +1,62 @@
+#!/usr/bin/env bash
+dry_run="0"
+script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
+
+if [[ $1 == "--dry" ]]; then
+    dry_run="1"
+fi
+
+log() {
+    if [[ $dry_run == "1" ]]; then
+        echo "[DRY_RUN]: $1"
+    else
+        echo "$1"
+    fi
+}
+
+log "env: $script_dir"
+
+update_files() {
+    log "copying over files from: $1"
+    pushd $1 &> /dev/null
+    (
+        configs=`find . -mindepth 1 -maxdepth 1 -type d`
+        for c in $configs; do
+            directory=${2%/}/${c#./}
+            log "    removing: rm -rf $directory"
+
+            if [[ $dry_run == "0" ]]; then
+                rm -rf $directory
+            fi
+
+            log "    copying env: cp $c $2"
+            if [[ $dry_run == "0" ]]; then
+                cp -r ./$c $2
+            fi
+        done
+
+    )
+    popd &> /dev/null
+}
+
+copy() {
+    log "removing: $2"
+    if [[ $dry == "0" ]]; then
+        rm $2
+    fi
+    log "copying: $1 to $2"
+    if [[ $dry == "0" ]]; then
+        cp $1 $2
+    fi
+}
+
+pushd $script_dir &> /dev/null
+update_files env/.config $XDG_CONFIG_HOME
+update_files env/.local $HOME/.local
+
+copy env/.zsh_profile $HOME/.zsh_profile
+copy env/.zshrc $HOME/.zshrc
+
+popd &> /dev/null
+
+

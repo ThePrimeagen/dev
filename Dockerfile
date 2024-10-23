@@ -8,7 +8,6 @@ COPY resources resources
 COPY main.go main.go
 RUN go build -v -o /run-app ./main.go
 
-
 FROM debian:bookworm
 
 COPY --from=builder /run-app /usr/local/bin/

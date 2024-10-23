@@ -1,9 +1,16 @@
 #!/usr/bin/env bash
-sudo apt update
-sudo apt install software-properties-common
-sudo add-apt-repository --yes --update ppa:ansible/ansible
-sudo apt install ansible
-git clone https://github.com/ThePrimeagen/dev $1
+sudo apt -y update
 
+if ! command -v git &> /dev/null; then
+    sudo apt -y install git
+fi
 
+if [ ! -d $HOME/personal ]; then
+    mkdir $HOME/personal
+fi
 
+git clone https://github.com/ThePrimeagen/dev $HOME/personal/dev
+
+pushd $HOME/personal/dev
+./run
+popd
