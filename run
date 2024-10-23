@@ -1,27 +1,18 @@
 #!/usr/bin/env bash
-remove="0"
+script_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+
 grep=""
-env="0"
 dry_run="0"
 
-# Loop until all arguments are processed
 while [[ $# -gt 0 ]]; do
-
     echo "ARG: \"$1\""
-    if [[ "$1" == "--env" ]]; then
-        env="1"
-    elif [[ "$1" == "--dry" ]]; then
+    if [[ "$1" == "--dry" ]]; then
         dry_run="1"
-    elif [[ "$1" == "--remove" ]]; then
-        remove="1"
     else
         grep="$1"
     fi
-
-    # Shift to the next argument
     shift
 done
-echo "RUN: env: $env -- remove: $remove -- grep: $grep -- dry: $dry_run"
 
 log() {
     if [[ $dry_run == "1" ]]; then
@@ -31,81 +22,66 @@ log() {
     fi
 }
 
-run_scripts() {
-    runs_dir=`find $DEV_ENV_HOME/runs -mindepth 1 -maxdepth 1 -type d`
+log "RUN: env: $env -- grep: $grep"
 
-    for s in $runs_dir; do
-        if [ ! -z "$grep" ]; then
-            if echo "$s" | grep -vq "$grep"; then
-                log "grep \"$grep\" filtered out $s"
-                continue
-            fi
-        fi
+runs_dir=`find $script_dir/runs -mindepth 1 -maxdepth 1 -executable`
 
-        script="install"
-        if [[ $remove == "1" ]]; then
-            script="remove"
-        fi
-
-        script=${s%/}/${script}
-
-        log "running script: $script"
-
-        if [[ $dry_run == "0" ]]; then
-            $script
-        fi
-    done
-}
-
-remove_files() {
-    pushd $1
-    (
-        configs=`find . -mindepth 1 -maxdepth 1 -type d`
-        if [[ $dry_run == "1" ]]; then
-            echo "[DRY_RUN]: removing: $configs"
-        else
-            echo "removing: $configs"
-        fi
-
-        for c in $configs; do
-            directory=${2%/}/${c}
-            if [[ $dry_run == "1" ]]; then
-                echo "[DRY_RUN]:    removing: $directory"
-            else
-                echo "    removing: $directory"
-                rm -rf $directory
-            fi
-        done
-
-        if [[ $dry_run == "1" ]]; then
-            echo "copying env: $2"
-        else
-            echo "copying env: $2"
-            cp -r ./* $2
-        fi
-    )
-    popd
-}
-
-run_env() {
-    pushd $DEV_ENV_HOME
-    echo "removing ~config"
-    remove_files env/.config $XDG_CONFIG_HOME
-
-    echo "removing ~local"
-    remove_files env/.local $HOME/.local
-
-    echo "copying zsh"
-    if [[ $dry_run == "0" ]]; then
-        cp $DEV_ENV_HOME/env/.zshrc ~/.zshrc
-        cp $DEV_ENV_HOME/env/.zsh_profile ~/.zsh_profile
+for s in $runs_dir; do
+    if echo "$s" | grep -vq "$grep"; then
+        log "grep \"$grep\" filtered out $s"
+        continue
     fi
 
-    popd
-}
+    log "running script: $s"
 
-if [[ "$env" == "1" ]]; then
-    run_env
-else
-    run_scripts
-fi
+    if [[ $dry_run == "0" ]]; then
+        $s
+    fi
+done
+
+#remove_files() {
+#    pushd $1
+#    (
+#        configs=`find . -mindepth 1 -maxdepth 1 -type d`
+#        if [[ $dry_run == "1" ]]; then
+#            echo "[DRY_RUN]: removing: $configs"
+#        else
+#            echo "removing: $configs"
+#        fi
+#
+#        for c in $configs; do
+#            directory=${2%/}/${c}
+#            if [[ $dry_run == "1" ]]; then
+#                echo "[DRY_RUN]:    removing: $directory"
+#            else
+#                echo "    removing: $directory"
+#                rm -rf $directory
+#            fi
+#        done
+#
+#        if [[ $dry_run == "1" ]]; then
+#            echo "copying env: $2"
+#        else
+#            echo "copying env: $2"
+#            cp -r ./* $2
+#        fi
+#    )
+#    popd
+#}
+
+#run_env() {
+#    pushd $script_dir
+#    echo "removing ~config"
+#    remove_files env/.config $XDG_CONFIG_HOME
+#
+#    echo "removing ~local"
+#    remove_files env/.local $HOME/.local
+#
+#    echo "copying zsh"
+#    if [[ $dry_run == "0" ]]; then
+#        cp $script_dir/env/.zshrc ~/.zshrc
+#        cp $script_dir/env/.zsh_profile ~/.zsh_profile
+#    fi
+#
+#    popd
+#}

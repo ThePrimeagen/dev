@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-
-sudo apt -y update
-sudo apt-get -y remove git fzf ripgrep pavucontrol xclip jq tldr shutter python3-pip
-
-
-
