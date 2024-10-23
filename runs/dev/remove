@@ -5,4 +5,5 @@ rustup self uninstall
 rm -rf ~/.cargo ~/.rustup
 
 # neovim btw
+sudo apt -y remove cmake gettext lua5.1 liblua5.1-0-dev
 rm -rf $HOME/neovim

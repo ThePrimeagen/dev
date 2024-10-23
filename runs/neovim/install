@@ -7,17 +7,22 @@ fi
 
 echo "version: \"$version\""
 
-if [[ -d ~/neovim ]]; then
-    pushd ~/neovim
-    git fetch --all
-    git checkout $version
-
-    make clean
-    make CMAKE_BUILD_TYPE=RelWithDebInfo
-    sudo make install
-
-    popd
-else
-    echo "NEOVIM DOES NOT EXIST, please run \"dev\" command to install neovim"
+# neovim btw
+if [ ! -d $HOME/neovim ]; then
+    git clone https://github.com/neovim/neovim.git $HOME/neovim
+    sudo apt -y install cmake gettext lua5.1 liblua5.1-0-dev
 fi
+
+git -C ~/neovim fetch --all
+git -C ~/neovim checkout $version
+
+make -C ~/neovim clean
+make -C ~/neovim CMAKE_BUILD_TYPE=RelWithDebInfo
+sudo make -C ~/neovim install
+
+git clone https://github.com/ThePrimeagen/harpoon.git $HOME/personal/harpoon
+git clone https://github.com/ThePrimeagen/vim-apm.git $HOME/personal/vim-apm
+git clone https://github.com/ThePrimeagen/vim-with-me.git $HOME/personal/vim-with-me
+git clone https://github.com/ThePrimeagen/vim-arcade.git $HOME/personal/vim-arcade
+git clone https://github.com/nvim-lua/plenary.nvim.git $HOME/personal/plenary
 
