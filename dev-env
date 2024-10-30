@@ -40,12 +40,12 @@ update_files() {
 }
 
 copy() {
-    log "removing: $2"
-    if [[ $dry == "0" ]]; then
+    log "removing: $2 -- DRY_RUN = \"$dry_run\""
+    if [[ $dry_run == "0" ]]; then
         rm $2
     fi
     log "copying: $1 to $2"
-    if [[ $dry == "0" ]]; then
+    if [[ $dry_run == "0" ]]; then
         cp $1 $2
     fi
 }
@@ -54,8 +54,11 @@ pushd $script_dir &> /dev/null
 update_files env/.config $XDG_CONFIG_HOME
 update_files env/.local $HOME/.local
 
+copy tmux-sessionizer/tmux-sessionizer $HOME/.local/bin/tmux-sessionizer
 copy env/.zsh_profile $HOME/.zsh_profile
 copy env/.zshrc $HOME/.zshrc
+copy env/.xprofile $HOME/.xprofile
+copy env/.tmux-sessionizer $HOME/.tmux-sessionizer
 
 popd &> /dev/null
 

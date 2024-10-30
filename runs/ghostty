@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+git clone git@github.com:ghostty-org/ghostty.git $HOME/personal/ghostty
+
+(
+cd $HOME/personal/ghostty
+zig build -Dapp-runtime=glfw run
+)

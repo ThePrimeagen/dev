@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 (
-cd ~/personal/dev/playbooks
-ansible-playbook dev-env.yml
+cd $HOME/dev
+./dev-env
 hash -r
 )

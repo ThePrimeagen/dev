@@ -1,3 +1,0 @@
-docker build -t ansible_test -f manual.Dockerfile .
-docker run -it ansible_test bash
-

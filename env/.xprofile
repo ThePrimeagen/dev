@@ -1,0 +1,2 @@
+export PATH=$PATH:$HOME/personal/ghostty/zig-out/bin
+

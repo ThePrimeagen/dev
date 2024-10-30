@@ -1,808 +1,0 @@
-Script started on 2024-10-15 17:54:01-06:00 [TERM="tmux-256color" TTY="/dev/pts/11" COLUMNS="112" LINES="26"]
-[1m[7m%[27m[1m[0m                                                                                                                k~/personal/dev\]7;file://pop-os/home/theprimeagen/personal/dev\[0m[27m[24m[J[01;32m➜  [36mdev[00m [K[?1h=[?2004h[0m[27m[24m[J[01;32m➜  [36mdev[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?2004l
-[1m[7m%[27m[1m[0m                                                                                                                k~/personal/dev\]7;file://pop-os/home/theprimeagen/personal/dev\[0m[27m[24m[J[01;31m➜  [36mdev[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004hREMOVE=1 ./run[?1l>[?2004l
-k./run\[sudo] password for theprimeagen: 
-Sorry, try again.
-[sudo] password for theprimeagen: 
-Sorry, try again.
-[sudo] password for theprimeagen: 
-Reading package lists... 0%Reading package lists... 100%Reading package lists... Done
-Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... Done
-Reading state information... 0% Reading state information... 0%Reading state information... Done
-The following packages were automatically installed and are no longer required:
-  bridge-utils containerd libqt5xml5 pigz runc ubuntu-fan
-Use 'sudo apt autoremove' to remove them.
-The following packages will be REMOVED:
-  docker.io
-0 upgraded, 0 newly installed, 1 to remove and 550 not upgraded.
-After this operation, 113 MB disk space will be freed.
-Do you want to continue? [Y/n] Y
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 281983 files and directories currently installed.)
-Removing docker.io (24.0.5-0ubuntu1~22.04.1) ...
-'/usr/share/docker.io/contrib/nuke-graph-directory.sh' -> '/var/lib/docker/nuke-graph-directory.sh'
-Warning: Stopping docker.service, but it can still be activated by:
-  docker.socket
-Processing triggers for man-db (2.10.2-1) ...
-Reading package lists... 0%Reading package lists... 100%Reading package lists... Done
-Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... Done
-Reading state information... 0% Reading state information... 0%Reading state information... Done
-Package 'docker-doc' is not installed, so not removed
-The following packages were automatically installed and are no longer required:
-  bridge-utils containerd libqt5xml5 pigz runc ubuntu-fan
-Use 'sudo apt autoremove' to remove them.
-0 upgraded, 0 newly installed, 0 to remove and 550 not upgraded.
-Reading package lists... 0%Reading package lists... 100%Reading package lists... Done
-Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... Done
-Reading state information... 0% Reading state information... 0%Reading state information... Done
-The following packages were automatically installed and are no longer required:
-  bridge-utils containerd libqt5xml5 pigz python3-attr python3-docker python3-dockerpty python3-docopt
-  python3-dotenv python3-jsonschema python3-pyrsistent python3-texttable python3-websocket runc ubuntu-fan
-Use 'sudo apt autoremove' to remove them.
-The following packages will be REMOVED:
-  docker-compose
-0 upgraded, 0 newly installed, 1 to remove and 550 not upgraded.
-After this operation, 510 kB disk space will be freed.
-Do you want to continue? [Y/n] Y
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 281772 files and directories currently installed.)
-Removing docker-compose (1.29.2-1) ...
-Processing triggers for man-db (2.10.2-1) ...
-Reading package lists... 0%Reading package lists... 100%Reading package lists... Done
-Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... Done
-Reading state information... 0% Reading state information... 0%Reading state information... Done
-Package 'docker-compose-v2' is not installed, so not removed
-The following packages were automatically installed and are no longer required:
-  bridge-utils containerd libqt5xml5 pigz python3-attr python3-docker python3-dockerpty python3-docopt
-  python3-dotenv python3-jsonschema python3-pyrsistent python3-texttable python3-websocket runc ubuntu-fan
-Use 'sudo apt autoremove' to remove them.
-0 upgraded, 0 newly installed, 0 to remove and 550 not upgraded.
-Reading package lists... 0%Reading package lists... 100%Reading package lists... Done
-Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... Done
-Reading state information... 0% Reading state information... 0%Reading state information... Done
-Package 'podman-docker' is not installed, so not removed
-The following packages were automatically installed and are no longer required:
-  bridge-utils containerd libqt5xml5 pigz python3-attr python3-docker python3-dockerpty python3-docopt
-  python3-dotenv python3-jsonschema python3-pyrsistent python3-texttable python3-websocket runc ubuntu-fan
-Use 'sudo apt autoremove' to remove them.
-0 upgraded, 0 newly installed, 0 to remove and 550 not upgraded.
-Reading package lists... 0%Reading package lists... 100%Reading package lists... Done
-Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... Done
-Reading state information... 0% Reading state information... 0%Reading state information... Done
-The following packages were automatically installed and are no longer required:
-  bridge-utils libqt5xml5 pigz python3-attr python3-docker python3-dockerpty python3-docopt python3-dotenv
-  python3-jsonschema python3-pyrsistent python3-texttable python3-websocket runc ubuntu-fan
-Use 'sudo apt autoremove' to remove them.
-The following packages will be REMOVED:
-  containerd
-0 upgraded, 0 newly installed, 1 to remove and 549 not upgraded.
-After this operation, 134 MB disk space will be freed.
-Do you want to continue? [Y/n] ^CReading package lists... 0%Reading package lists... 100%Reading package lists... Done
-Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... Done
-Reading state information... 0% Reading state information... 0%Reading state information... Done
-The following packages were automatically installed and are no longer required:
-  bridge-utils libqt5xml5 pigz python3-attr python3-docker python3-dockerpty python3-docopt python3-dotenv
-  python3-jsonschema python3-pyrsistent python3-texttable python3-websocket ubuntu-fan
-Use 'sudo apt autoremove' to remove them.
-The following packages will be REMOVED:
-  containerd runc
-0 upgraded, 0 newly installed, 2 to remove and 548 not upgraded.
-After this operation, 152 MB disk space will be freed.
-Do you want to continue? [Y/n] ^C[1m[7m%[27m[1m[0m                                                                                                                k~/personal/dev\]7;file://pop-os/home/theprimeagen/personal/dev\[0m[27m[24m[J[01;31m➜  [36mdev[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h[?2004l
-[1m[7m%[27m[1m[0m                                                                                                                k~/personal/dev\]7;file://pop-os/home/theprimeagen/personal/dev\[0m[27m[24m[J[01;31m➜  [36mdev[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h[?2004l
-[1m[7m%[27m[1m[0m                                                                                                                k~/personal/dev\]7;file://pop-os/home/theprimeagen/personal/dev\[0m[27m[24m[J[01;31m➜  [36mdev[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h[?2004l
-[1m[7m%[27m[1m[0m                                                                                                                k~/personal/dev\]7;file://pop-os/home/theprimeagen/personal/dev\[0m[27m[24m[J[01;31m➜  [36mdev[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h[?2004l
-[1m[7m%[27m[1m[0m                                                                                                                k~/personal/dev\]7;file://pop-os/home/theprimeagen/personal/dev\[0m[27m[24m[J[01;31m➜  [36mdev[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h[?2004l
-[1m[7m%[27m[1m[0m                                                                                                                k~/personal/dev\]7;file://pop-os/home/theprimeagen/personal/dev\[0m[27m[24m[J[01;31m➜  [36mdev[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004hREMOVE=1 ./run[14D./run         [9DREMOVE=1 ./run[?1l>[?2004l
-k./run\sudo: invalid option -- 'y'
-usage: sudo -h | -K | -k | -V
-usage: sudo -v [-ABknS] [-g group] [-h host] [-p prompt] [-u user]
-usage: sudo -l [-ABknS] [-g group] [-h host] [-p prompt] [-U user] [-u user] [command]
-usage: sudo [-ABbEHknPS] [-r role] [-t type] [-C num] [-D directory] [-g group] [-h host] [-p prompt] [-R
-            directory] [-T timeout] [-u user] [VAR=value] [-i|-s] [<command>]
-usage: sudo -e [-ABknS] [-r role] [-t type] [-C num] [-D directory] [-g group] [-h host] [-p prompt] [-R
-            directory] [-T timeout] [-u user] file ...
-sudo: invalid option -- 'y'
-usage: sudo -h | -K | -k | -V
-usage: sudo -v [-ABknS] [-g group] [-h host] [-p prompt] [-u user]
-usage: sudo -l [-ABknS] [-g group] [-h host] [-p prompt] [-U user] [-u user] [command]
-usage: sudo [-ABbEHknPS] [-r role] [-t type] [-C num] [-D directory] [-g group] [-h host] [-p prompt] [-R
-            directory] [-T timeout] [-u user] [VAR=value] [-i|-s] [<command>]
-usage: sudo -e [-ABknS] [-r role] [-t type] [-C num] [-D directory] [-g group] [-h host] [-p prompt] [-R
-            directory] [-T timeout] [-u user] file ...
-sudo: invalid option -- 'y'
-usage: sudo -h | -K | -k | -V
-usage: sudo -v [-ABknS] [-g group] [-h host] [-p prompt] [-u user]
-usage: sudo -l [-ABknS] [-g group] [-h host] [-p prompt] [-U user] [-u user] [command]
-usage: sudo [-ABbEHknPS] [-r role] [-t type] [-C num] [-D directory] [-g group] [-h host] [-p prompt] [-R
-            directory] [-T timeout] [-u user] [VAR=value] [-i|-s] [<command>]
-usage: sudo -e [-ABknS] [-r role] [-t type] [-C num] [-D directory] [-g group] [-h host] [-p prompt] [-R
-            directory] [-T timeout] [-u user] file ...
-sudo: invalid option -- 'y'
-usage: sudo -h | -K | -k | -V
-usage: sudo -v [-ABknS] [-g group] [-h host] [-p prompt] [-u user]
-usage: sudo -l [-ABknS] [-g group] [-h host] [-p prompt] [-U user] [-u user] [command]
-usage: sudo [-ABbEHknPS] [-r role] [-t type] [-C num] [-D directory] [-g group] [-h host] [-p prompt] [-R
-            directory] [-T timeout] [-u user] [VAR=value] [-i|-s] [<command>]
-usage: sudo -e [-ABknS] [-r role] [-t type] [-C num] [-D directory] [-g group] [-h host] [-p prompt] [-R
-            directory] [-T timeout] [-u user] file ...
-sudo: invalid option -- 'y'
-usage: sudo -h | -K | -k | -V
-usage: sudo -v [-ABknS] [-g group] [-h host] [-p prompt] [-u user]
-usage: sudo -l [-ABknS] [-g group] [-h host] [-p prompt] [-U user] [-u user] [command]
-usage: sudo [-ABbEHknPS] [-r role] [-t type] [-C num] [-D directory] [-g group] [-h host] [-p prompt] [-R
-            directory] [-T timeout] [-u user] [VAR=value] [-i|-s] [<command>]
-usage: sudo -e [-ABknS] [-r role] [-t type] [-C num] [-D directory] [-g group] [-h host] [-p prompt] [-R
-            directory] [-T timeout] [-u user] file ...
-sudo: invalid option -- 'y'
-usage: sudo -h | -K | -k | -V
-usage: sudo -v [-ABknS] [-g group] [-h host] [-p prompt] [-u user]
-usage: sudo -l [-ABknS] [-g group] [-h host] [-p prompt] [-U user] [-u user] [command]
-usage: sudo [-ABbEHknPS] [-r role] [-t type] [-C num] [-D directory] [-g group] [-h host] [-p prompt] [-R
-            directory] [-T timeout] [-u user] [VAR=value] [-i|-s] [<command>]
-usage: sudo -e [-ABknS] [-r role] [-t type] [-C num] [-D directory] [-g group] [-h host] [-p prompt] [-R
-            directory] [-T timeout] [-u user] file ...
-sudo: invalid option -- 'y'
-usage: sudo -h | -K | -k | -V
-usage: sudo -v [-ABknS] [-g group] [-h host] [-p prompt] [-u user]
-usage: sudo -l [-ABknS] [-g group] [-h host] [-p prompt] [-U user] [-u user] [command]
-usage: sudo [-ABbEHknPS] [-r role] [-t type] [-C num] [-D directory] [-g group] [-h host] [-p prompt] [-R
-            directory] [-T timeout] [-u user] [VAR=value] [-i|-s] [<command>]
-usage: sudo -e [-ABknS] [-r role] [-t type] [-C num] [-D directory] [-g group] [-h host] [-p prompt] [-R
-            directory] [-T timeout] [-u user] file ...
-[1m[7m%[27m[1m[0m                                                                                                                k~/personal/dev\]7;file://pop-os/home/theprimeagen/personal/dev\[0m[27m[24m[J[01;31m➜  [36mdev[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h[?2004l
-[1m[7m%[27m[1m[0m                                                                                                                k~/personal/dev\]7;file://pop-os/home/theprimeagen/personal/dev\[0m[27m[24m[J[01;31m➜  [36mdev[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004hREMOVE=1 ./run[?1l>[?2004l
-k./run\Reading package lists... 0%Reading package lists... 100%Reading package lists... Done
-Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... Done
-Reading state information... 0% Reading state information... 0%Reading state information... Done
-Package 'docker.io' is not installed, so not removed
-The following packages were automatically installed and are no longer required:
-  bridge-utils containerd libqt5xml5 pigz python3-attr python3-docker python3-dockerpty python3-docopt
-  python3-dotenv python3-jsonschema python3-pyrsistent python3-texttable python3-websocket runc ubuntu-fan
-Use 'sudo apt autoremove' to remove them.
-0 upgraded, 0 newly installed, 0 to remove and 550 not upgraded.
-Reading package lists... 0%Reading package lists... 100%Reading package lists... Done
-Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... Done
-Reading state information... 0% Reading state information... 0%Reading state information... Done
-Package 'docker-doc' is not installed, so not removed
-The following packages were automatically installed and are no longer required:
-  bridge-utils containerd libqt5xml5 pigz python3-attr python3-docker python3-dockerpty python3-docopt
-  python3-dotenv python3-jsonschema python3-pyrsistent python3-texttable python3-websocket runc ubuntu-fan
-Use 'sudo apt autoremove' to remove them.
-0 upgraded, 0 newly installed, 0 to remove and 550 not upgraded.
-Reading package lists... 0%Reading package lists... 100%Reading package lists... Done
-Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... Done
-Reading state information... 0% Reading state information... 0%Reading state information... Done
-Package 'docker-compose' is not installed, so not removed
-The following packages were automatically installed and are no longer required:
-  bridge-utils containerd libqt5xml5 pigz python3-attr python3-docker python3-dockerpty python3-docopt
-  python3-dotenv python3-jsonschema python3-pyrsistent python3-texttable python3-websocket runc ubuntu-fan
-Use 'sudo apt autoremove' to remove them.
-0 upgraded, 0 newly installed, 0 to remove and 550 not upgraded.
-Reading package lists... 0%Reading package lists... 100%Reading package lists... Done
-Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... Done
-Reading state information... 0% Reading state information... 0%Reading state information... Done
-Package 'docker-compose-v2' is not installed, so not removed
-The following packages were automatically installed and are no longer required:
-  bridge-utils containerd libqt5xml5 pigz python3-attr python3-docker python3-dockerpty python3-docopt
-  python3-dotenv python3-jsonschema python3-pyrsistent python3-texttable python3-websocket runc ubuntu-fan
-Use 'sudo apt autoremove' to remove them.
-0 upgraded, 0 newly installed, 0 to remove and 550 not upgraded.
-Reading package lists... 0%Reading package lists... 100%Reading package lists... Done
-Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... Done
-Reading state information... 0% Reading state information... 0%Reading state information... Done
-Package 'podman-docker' is not installed, so not removed
-The following packages were automatically installed and are no longer required:
-  bridge-utils containerd libqt5xml5 pigz python3-attr python3-docker python3-dockerpty python3-docopt
-  python3-dotenv python3-jsonschema python3-pyrsistent python3-texttable python3-websocket runc ubuntu-fan
-Use 'sudo apt autoremove' to remove them.
-0 upgraded, 0 newly installed, 0 to remove and 550 not upgraded.
-Reading package lists... 0%Reading package lists... 100%Reading package lists... Done
-Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... Done
-Reading state information... 0% Reading state information... 0%Reading state information... Done
-The following packages were automatically installed and are no longer required:
-  bridge-utils libqt5xml5 pigz python3-attr python3-docker python3-dockerpty python3-docopt python3-dotenv
-  python3-jsonschema python3-pyrsistent python3-texttable python3-websocket runc ubuntu-fan
-Use 'sudo apt autoremove' to remove them.
-The following packages will be REMOVED:
-  containerd
-0 upgraded, 0 newly installed, 1 to remove and 549 not upgraded.
-After this operation, 134 MB disk space will be freed.
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 281709 files and directories currently installed.)
-Removing containerd (1.7.2-0ubuntu1~22.04.1) ...
-Processing triggers for man-db (2.10.2-1) ...
-Reading package lists... 0%Reading package lists... 100%Reading package lists... Done
-Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... Done
-Reading state information... 0% Reading state information... 0%Reading state information... Done
-The following packages were automatically installed and are no longer required:
-  bridge-utils libqt5xml5 pigz python3-attr python3-docker python3-dockerpty python3-docopt python3-dotenv
-  python3-jsonschema python3-pyrsistent python3-texttable python3-websocket ubuntu-fan
-Use 'sudo apt autoremove' to remove them.
-The following packages will be REMOVED:
-  runc
-0 upgraded, 0 newly installed, 1 to remove and 548 not upgraded.
-After this operation, 18.2 MB disk space will be freed.
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 281675 files and directories currently installed.)
-Removing runc (1.1.7-0ubuntu1~22.04.2) ...
-Processing triggers for man-db (2.10.2-1) ...
-[1m[7m%[27m[1m[0m                                                                                                                k~/personal/dev\]7;file://pop-os/home/theprimeagen/personal/dev\[0m[27m[24m[J[01;32m➜  [36mdev[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004hREMOVE=1 ./run./run  ./run       [12D[?1l>[?2004l
-k./run\Reading package lists... 0%Reading package lists... 100%Reading package lists... Done
-Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... Done
-Reading state information... 0% Reading state information... 0%Reading state information... Done
-Package 'docker.io' is not installed, so not removed
-The following packages were automatically installed and are no longer required:
-  bridge-utils libqt5xml5 pigz python3-attr python3-docker python3-dockerpty python3-docopt python3-dotenv
-  python3-jsonschema python3-pyrsistent python3-texttable python3-websocket ubuntu-fan
-Use 'sudo apt autoremove' to remove them.
-0 upgraded, 0 newly installed, 0 to remove and 548 not upgraded.
-Reading package lists... 0%Reading package lists... 100%Reading package lists... Done
-Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... Done
-Reading state information... 0% Reading state information... 0%Reading state information... Done
-Package 'docker-doc' is not installed, so not removed
-The following packages were automatically installed and are no longer required:
-  bridge-utils libqt5xml5 pigz python3-attr python3-docker python3-dockerpty python3-docopt python3-dotenv
-  python3-jsonschema python3-pyrsistent python3-texttable python3-websocket ubuntu-fan
-Use 'sudo apt autoremove' to remove them.
-0 upgraded, 0 newly installed, 0 to remove and 548 not upgraded.
-Reading package lists... 0%Reading package lists... 100%Reading package lists... Done
-Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... Done
-Reading state information... 0% Reading state information... 0%Reading state information... Done
-Package 'docker-compose' is not installed, so not removed
-The following packages were automatically installed and are no longer required:
-  bridge-utils libqt5xml5 pigz python3-attr python3-docker python3-dockerpty python3-docopt python3-dotenv
-  python3-jsonschema python3-pyrsistent python3-texttable python3-websocket ubuntu-fan
-Use 'sudo apt autoremove' to remove them.
-0 upgraded, 0 newly installed, 0 to remove and 548 not upgraded.
-Reading package lists... 0%Reading package lists... 100%Reading package lists... Done
-Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... Done
-Reading state information... 0% Reading state information... 0%Reading state information... Done
-Package 'docker-compose-v2' is not installed, so not removed
-The following packages were automatically installed and are no longer required:
-  bridge-utils libqt5xml5 pigz python3-attr python3-docker python3-dockerpty python3-docopt python3-dotenv
-  python3-jsonschema python3-pyrsistent python3-texttable python3-websocket ubuntu-fan
-Use 'sudo apt autoremove' to remove them.
-0 upgraded, 0 newly installed, 0 to remove and 548 not upgraded.
-Reading package lists... 0%Reading package lists... 100%Reading package lists... Done
-Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... Done
-Reading state information... 0% Reading state information... 0%Reading state information... Done
-Package 'podman-docker' is not installed, so not removed
-The following packages were automatically installed and are no longer required:
-  bridge-utils libqt5xml5 pigz python3-attr python3-docker python3-dockerpty python3-docopt python3-dotenv
-  python3-jsonschema python3-pyrsistent python3-texttable python3-websocket ubuntu-fan
-Use 'sudo apt autoremove' to remove them.
-0 upgraded, 0 newly installed, 0 to remove and 548 not upgraded.
-Reading package lists... 0%Reading package lists... 100%Reading package lists... Done
-Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... Done
-Reading state information... 0% Reading state information... 0%Reading state information... Done
-Package 'containerd' is not installed, so not removed
-The following packages were automatically installed and are no longer required:
-  bridge-utils libqt5xml5 pigz python3-attr python3-docker python3-dockerpty python3-docopt python3-dotenv
-  python3-jsonschema python3-pyrsistent python3-texttable python3-websocket ubuntu-fan
-Use 'sudo apt autoremove' to remove them.
-0 upgraded, 0 newly installed, 0 to remove and 548 not upgraded.
-Reading package lists... 0%Reading package lists... 100%Reading package lists... Done
-Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... Done
-Reading state information... 0% Reading state information... 0%Reading state information... Done
-Package 'runc' is not installed, so not removed
-The following packages were automatically installed and are no longer required:
-  bridge-utils libqt5xml5 pigz python3-attr python3-docker python3-dockerpty python3-docopt python3-dotenv
-  python3-jsonschema python3-pyrsistent python3-texttable python3-websocket ubuntu-fan
-Use 'sudo apt autoremove' to remove them.
-0 upgraded, 0 newly installed, 0 to remove and 548 not upgraded.
-[1m[7m%[27m[1m[0m                                                                                                                k~/personal/dev\]7;file://pop-os/home/theprimeagen/personal/dev\[0m[27m[24m[J[01;32m➜  [36mdev[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h[?2004l
-[1m[7m%[27m[1m[0m                                                                                                                k~/personal/dev\]7;file://pop-os/home/theprimeagen/personal/dev\[0m[27m[24m[J[01;31m➜  [36mdev[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h[?2004l
-[1m[7m%[27m[1m[0m                                                                                                                k~/personal/dev\]7;file://pop-os/home/theprimeagen/personal/dev\[0m[27m[24m[J[01;31m➜  [36mdev[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h./run[?1l>[?2004l
-k./run\running script: /home/theprimeagen/personal/dev/runs/docker/remove
-Reading package lists... 0%Reading package lists... 100%Reading package lists... Done
-Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... Done
-Reading state information... 0% Reading state information... 0%Reading state information... Done
-Package 'docker.io' is not installed, so not removed
-The following packages were automatically installed and are no longer required:
-  bridge-utils libqt5xml5 pigz python3-attr python3-docker python3-dockerpty python3-docopt python3-dotenv
-  python3-jsonschema python3-pyrsistent python3-texttable python3-websocket ubuntu-fan
-Use 'sudo apt autoremove' to remove them.
-^CReading package lists... 0%Reading package lists... 100%Reading package lists... Done
-Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... Done
-Reading state information... 0% Reading state information... 0%Reading state information... Done
-Package 'docker-doc' is not installed, so not removed
-The following packages were automatically installed and are no longer required:
-  bridge-utils libqt5xml5 pigz python3-attr python3-docker python3-dockerpty python3-docopt python3-dotenv
-  python3-jsonschema python3-pyrsistent python3-texttable python3-websocket ubuntu-fan
-Use 'sudo apt autoremove' to remove them.
-0 upgraded, 0 newly installed, 0 to remove and 548 not upgraded.
-Reading package lists... 0%Reading package lists... 100%Reading package lists... Done
-Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... Done
-Reading state information... 0% Reading state information... 0%Reading state information... Done
-Package 'docker-compose' is not installed, so not removed
-The following packages were automatically installed and are no longer required:
-  bridge-utils libqt5xml5 pigz python3-attr python3-docker python3-dockerpty python3-docopt python3-dotenv
-  python3-jsonschema python3-pyrsistent python3-texttable python3-websocket ubuntu-fan
-Use 'sudo apt autoremove' to remove them.
-^CReading package lists... 0%Reading package lists... 100%Reading package lists... Done
-Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%^CReading package lists... 0%Reading package lists... 100%Reading package lists... Done
-Building dependency tree... 0%Building dependency tree... 0%^CReading package lists... 0%Reading package lists... 100%Reading package lists... Done
-Building dependency tree... 0%Building dependency tree... 0%^CReading package lists... 0%Reading package lists... 100%Reading package lists... Done
-Building dependency tree... 0%Building dependency tree... 0%^C[1m[7m%[27m[1m[0m                                                                                                                k~/personal/dev\]7;file://pop-os/home/theprimeagen/personal/dev\[0m[27m[24m[J[01;31m➜  [36mdev[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h./run[?1l>[?2004l
-k./run\1 running script: /home/theprimeagen/personal/dev/runs/docker/remove
-Reading package lists... 0%Reading package lists... 100%Reading package lists... Done
-Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%^CReading package lists... 0%Reading package lists... 100%Reading package lists... Done
-Building dependency tree... 0%Building dependency tree... 0%^CReading package lists... 0%Reading package lists... 100%Reading package lists... Done
-Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%^CReading package lists... 0%Reading package lists... 100%Reading package lists... Done
-Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%^CReading package lists... 0%Reading package lists... 100%Reading package lists... Done
-Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%^CReading package lists... 0%Reading package lists... 100%Reading package lists... Done
-Building dependency tree... 0%Building dependency tree... 0%^CReading package lists... 0%Reading package lists... 100%Reading package lists... Done
-Building dependency tree... 0%Building dependency tree... 0%^C[1m[7m%[27m[1m[0m                                                                                                                k~/personal/dev\]7;file://pop-os/home/theprimeagen/personal/dev\[0m[27m[24m[J[01;31m➜  [36mdev[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h[?2004l
-[1m[7m%[27m[1m[0m                                                                                                                k~/personal/dev\]7;file://pop-os/home/theprimeagen/personal/dev\[0m[27m[24m[J[01;31m➜  [36mdev[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h[?2004l
-[1m[7m%[27m[1m[0m                                                                                                                k~/personal/dev\]7;file://pop-os/home/theprimeagen/personal/dev\[0m[27m[24m[J[01;31m➜  [36mdev[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h[?2004l
-[1m[7m%[27m[1m[0m                                                                                                                k~/personal/dev\]7;file://pop-os/home/theprimeagen/personal/dev\[0m[27m[24m[J[01;31m➜  [36mdev[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h[?2004l
-[1m[7m%[27m[1m[0m                                                                                                                k~/personal/dev\]7;file://pop-os/home/theprimeagen/personal/dev\[0m[27m[24m[J[01;31m➜  [36mdev[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h./run[?1l>[?2004l
-k./run\WTF
-1 running script: /home/theprimeagen/personal/dev/runs/docker/remove
-Reading package lists... 0%Reading package lists... 100%Reading package lists... Done
-Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%^CReading package lists... 0%Reading package lists... 100%Reading package lists... Done
-Building dependency tree... 0%Building dependency tree... 0%^CReading package lists... 0%Reading package lists... 100%Reading package lists... Done
-Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%^CReading package lists... 0%Reading package lists... 100%Reading package lists... Done
-Building dependency tree... 0%Building dependency tree... 0%^CReading package lists... 0%Reading package lists... 100%Reading package lists... Done
-Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%^CReading package lists... 0%Reading package lists... 100%Reading package lists... Done
-Building dependency tree... 0%Building dependency tree... 0%^CReading package lists... 0%^C[1m[7m%[27m[1m[0m                                                                                                                k~/personal/dev\]7;file://pop-os/home/theprimeagen/personal/dev\[0m[27m[24m[J[01;31m➜  [36mdev[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h[?2004l
-[1m[7m%[27m[1m[0m                                                                                                                k~/personal/dev\]7;file://pop-os/home/theprimeagen/personal/dev\[0m[27m[24m[J[01;31m➜  [36mdev[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h[?2004l
-[1m[7m%[27m[1m[0m                                                                                                                k~/personal/dev\]7;file://pop-os/home/theprimeagen/personal/dev\[0m[27m[24m[J[01;31m➜  [36mdev[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h[?2004l
-[1m[7m%[27m[1m[0m                                                                                                                k~/personal/dev\]7;file://pop-os/home/theprimeagen/personal/dev\[0m[27m[24m[J[01;31m➜  [36mdev[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004heecho $REMOVE[?1l>[?2004l
-kecho\1
-[1m[7m%[27m[1m[0m                                                                                                                k~/personal/dev\]7;file://pop-os/home/theprimeagen/personal/dev\[0m[27m[24m[J[01;32m➜  [36mdev[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h[?2004l
-[1m[7m%[27m[1m[0m                                                                                                                k~/personal/dev\]7;file://pop-os/home/theprimeagen/personal/dev\[0m[27m[24m[J[01;31m➜  [36mdev[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004hecho $REMOVE[12D./run       [?1l>[?2004l
-k./run\0 running script: /home/theprimeagen/personal/dev/runs/docker/install
-0% [Working]            Hit:1 http://apt.pop-os.org/proprietary jammy InRelease
-0% [Connecting to ppa.launchpadcontent.net] [Waiting for headers]                                                                 Hit:2 http://apt.pop-os.org/release jammy InRelease
-0% [Connecting to ppa.launchpadcontent.net] [Waiting for headers]                                                                 Hit:3 https://dl.google.com/linux/chrome/deb stable InRelease
-0% [Connecting to ppa.launchpadcontent.net] [Waiting for headers]                                                                 Hit:4 http://apt.pop-os.org/ubuntu jammy InRelease
-                                                                 0% [Connecting to ppa.launchpadcontent.net (185.125.190.80)]                                                            Get:5 http://apt.pop-os.org/ubuntu jammy-security InRelease [129 kB]
-0% [Connecting to ppa.launchpadcontent.net (185.125.190.80)] [5 InRelease 964 B/129 kB 1%]0% [Connecting to ppa.launchpadcontent.net (185.125.190.80)] [5 InRelease 101 kB/129 kB 79%]                                                                                            0% [Connecting to ppa.launchpadcontent.net (185.125.190.80)]                                                            Get:6 http://apt.pop-os.org/ubuntu jammy-updates InRelease [128 kB]
-0% [Connected to ppa.launchpadcontent.net (185.125.190.80)] [6 InRelease 964 B/128 kB 1%]                                                                                         0% [Connected to ppa.launchpadcontent.net (185.125.190.80)]0% [Connected to ppa.launchpadcontent.net (185.125.190.80)] [Waiting for headers]                                                                                 Hit:7 http://apt.pop-os.org/ubuntu jammy-backports InRelease
-                                                                                 0% [Connected to ppa.launchpadcontent.net (185.125.190.80)]                                                           0% [Waiting for headers]0% [Waiting for headers]0% [Waiting for headers]0% [Waiting for headers]                        Get:8 http://apt.pop-os.org/ubuntu jammy-updates/main amd64 c-n-f Metadata [17.9 kB]
-0% [Waiting for headers] [8 Commands-amd64 0 B/17.9 kB 0%]                                                          0% [Waiting for headers]0% [8 Commands-amd64 store 0 B] [Waiting for headers]                                                     0% [Waiting for headers]0% [Waiting for headers]                        Hit:9 https://ppa.launchpadcontent.net/ansible/ansible/ubuntu jammy InRelease
-                        0% [Working]0% [Waiting for headers]                        Hit:10 https://ppa.launchpadcontent.net/git-core/ppa/ubuntu jammy InRelease
-                        0% [Working]0% [Waiting for headers]                        Hit:11 https://ppa.launchpadcontent.net/obsproject/obs-studio/ubuntu jammy InRelease
-                        0% [Working]100% [Working]              Fetched 275 kB in 2s (168 kB/s)
-Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 3%Reading package lists... 3%Reading package lists... 4%Reading package lists... 4%Reading package lists... 6%Reading package lists... 6%Reading package lists... 6%Reading package lists... 6%Reading package lists... 6%Reading package lists... 6%Reading package lists... 6%Reading package lists... 6%Reading package lists... 30%Reading package lists... 30%Reading package lists... 43%Reading package lists... 43%Reading package lists... 54%Reading package lists... 54%Reading package lists... 54%Reading package lists... 54%Reading package lists... 55%Reading package lists... 55%Reading package lists... 55%Reading package lists... 55%Reading package lists... 59%Reading package lists... 59%Reading package lists... 60%Reading package lists... 60%Reading package lists... 62%Reading package lists... 62%Reading package lists... 68%Reading package lists... 68%Reading package lists... 68%Reading package lists... 68%Reading package lists... 71%Reading package lists... 71%Reading package lists... 73%Reading package lists... 73%Reading package lists... 74%Reading package lists... 74%Reading package lists... 75%Reading package lists... 75%Reading package lists... 75%Reading package lists... 75%Reading package lists... 75%Reading package lists... 75%Reading package lists... 75%Reading package lists... 75%Reading package lists... 80%Reading package lists... 80%Reading package lists... 81%Reading package lists... 81%Reading package lists... 84%Reading package lists... 84%Reading package lists... 86%Reading package lists... 90%Reading package lists... 90%Reading package lists... 90%Reading package lists... 90%Reading package lists... 93%Reading package lists... 93%Reading package lists... 95%Reading package lists... 95%Reading package lists... 97%Reading package lists... 97%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
-Reading package lists... 0%Reading package lists... 100%Reading package lists... Done
-Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... Done
-Reading state information... 0% Reading state information... 0%Reading state information... Done
-The following packages were automatically installed and are no longer required:
-  bridge-utils libqt5xml5 pigz python3-attr python3-docker python3-dockerpty python3-docopt python3-dotenv
-  python3-jsonschema python3-pyrsistent python3-texttable python3-websocket ubuntu-fan
-Use 'sudo apt autoremove' to remove them.
-The following additional packages will be installed:
-  libcurl4
-The following packages will be upgraded:
-  ca-certificates curl libcurl4
-3 upgraded, 0 newly installed, 0 to remove and 545 not upgraded.
-Need to get 645 kB of archives.
-After this operation, 11.3 kB of additional disk space will be used.
-0% [Working]            Get:1 http://apt.pop-os.org/ubuntu jammy-security/main amd64 ca-certificates all 20240203~22.04.1 [162 kB]
-2% [1 ca-certificates 14.3 kB/162 kB 9%]                                        27% [Working]             Get:2 http://apt.pop-os.org/ubuntu jammy-security/main amd64 curl amd64 7.81.0-1ubuntu1.18 [194 kB]
-27% [2 curl 5,712 B/194 kB 3%]                              57% [Waiting for headers]                         Get:3 http://apt.pop-os.org/ubuntu jammy-security/main amd64 libcurl4 amd64 7.81.0-1ubuntu1.18 [289 kB]
-58% [3 libcurl4 2,440 B/289 kB 1%]                                  100% [Working]              Fetched 645 kB in 0s (2,297 kB/s)
-Preconfiguring packages ...
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 281649 files and directories currently installed.)
-Preparing to unpack .../ca-certificates_20240203~22.04.1_all.deb ...
-Unpacking ca-certificates (20240203~22.04.1) over (20230311ubuntu0.22.04.1) ...
-Setting up ca-certificates (20240203~22.04.1) ...
-Updating certificates in /etc/ssl/certs...
-rehash: warning: skipping ca-certificates.crt,it does not contain exactly one certificate or CRL
-14 added, 5 removed; done.
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 281658 files and directories currently installed.)
-Preparing to unpack .../curl_7.81.0-1ubuntu1.18_amd64.deb ...
-Unpacking curl (7.81.0-1ubuntu1.18) over (7.81.0-1ubuntu1.13) ...
-Preparing to unpack .../libcurl4_7.81.0-1ubuntu1.18_amd64.deb ...
-Unpacking libcurl4:amd64 (7.81.0-1ubuntu1.18) over (7.81.0-1ubuntu1.13) ...
-Setting up libcurl4:amd64 (7.81.0-1ubuntu1.18) ...
-Setting up curl (7.81.0-1ubuntu1.18) ...
-Processing triggers for man-db (2.10.2-1) ...
-Processing triggers for ca-certificates (20240203~22.04.1) ...
-Updating certificates in /etc/ssl/certs...
-0 added, 0 removed; done.
-Running hooks in /etc/ca-certificates/update.d...
-done.
-Processing triggers for libc-bin (2.35-0ubuntu3.1) ...
-0% [Working]            Hit:1 http://apt.pop-os.org/proprietary jammy InRelease
-0% [Connecting to ppa.launchpadcontent.net (185.125.190.80)] [Connected to download.docker.com (18.160.143.31)]                                                                                                               Hit:2 http://apt.pop-os.org/release jammy InRelease
-0% [Connecting to ppa.launchpadcontent.net (185.125.190.80)] [Connected to download.docker.com (18.160.143.31)]0% [Connected to ppa.launchpadcontent.net (185.125.190.80)] [Waiting for headers] [Waiting for headers] [Waitin                                                                                                               Hit:3 http://apt.pop-os.org/ubuntu jammy InRelease
-                                                                                                               0% [Connected to ppa.launchpadcontent.net (185.125.190.80)] [Waiting for headers] [Waiting for headers]                                                                                                       Get:4 https://download.docker.com/linux/ubuntu jammy InRelease [48.8 kB]
-0% [Connected to ppa.launchpadcontent.net (185.125.190.80)] [4 InRelease 15.9 kB/48.8 kB 32%] [Waiting for head                                                                                                               0% [Connected to ppa.launchpadcontent.net (185.125.190.80)] [Waiting for headers] [Waiting for headers]                                                                                                       Hit:5 http://apt.pop-os.org/ubuntu jammy-security InRelease
-                                                                                                       0% [Connected to ppa.launchpadcontent.net (185.125.190.80)] [Waiting for headers]                                                                                 0% [Waiting for headers] [Waiting for headers] [Waiting for headers]                                                                    Hit:6 http://apt.pop-os.org/ubuntu jammy-updates InRelease
-                                                                    0% [Waiting for headers] [Waiting for headers]                                              Hit:7 https://dl.google.com/linux/chrome/deb stable InRelease
-0% [Waiting for headers] [Waiting for headers]                                              Hit:8 http://apt.pop-os.org/ubuntu jammy-backports InRelease
-                                              0% [Waiting for headers]0% [Waiting for headers]0% [Waiting for headers]                        Get:9 https://download.docker.com/linux/ubuntu jammy/stable amd64 Packages [40.7 kB]
-0% [Waiting for headers] [9 Packages 15.7 kB/40.7 kB 38%]                                                         0% [Waiting for headers]0% [9 Packages store 0 B] [Waiting for headers]                                               0% [Waiting for headers]                        Hit:10 https://ppa.launchpadcontent.net/ansible/ansible/ubuntu jammy InRelease
-                        0% [Working]0% [Waiting for headers]0% [Waiting for headers]0% [Waiting for headers]0% [Waiting for headers]                        Hit:11 https://ppa.launchpadcontent.net/git-core/ppa/ubuntu jammy InRelease
-0% [Waiting for headers]0% [Waiting for headers]0% [Waiting for headers]                        Hit:12 https://ppa.launchpadcontent.net/obsproject/obs-studio/ubuntu jammy InRelease
-                        0% [Working]100% [Working]              Fetched 89.5 kB in 1s (76.9 kB/s)
-Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 3%Reading package lists... 3%Reading package lists... 5%Reading package lists... 5%Reading package lists... 6%Reading package lists... 6%Reading package lists... 6%Reading package lists... 6%Reading package lists... 6%Reading package lists... 6%Reading package lists... 6%Reading package lists... 6%Reading package lists... 30%Reading package lists... 30%Reading package lists... 43%Reading package lists... 43%Reading package lists... 54%Reading package lists... 54%Reading package lists... 54%Reading package lists... 54%Reading package lists... 55%Reading package lists... 55%Reading package lists... 55%Reading package lists... 55%Reading package lists... 59%Reading package lists... 59%Reading package lists... 60%Reading package lists... 60%Reading package lists... 62%Reading package lists... 62%Reading package lists... 68%Reading package lists... 68%Reading package lists... 68%Reading package lists... 68%Reading package lists... 71%Reading package lists... 71%Reading package lists... 73%Reading package lists... 73%Reading package lists... 74%Reading package lists... 74%Reading package lists... 75%Reading package lists... 75%Reading package lists... 75%Reading package lists... 75%Reading package lists... 75%Reading package lists... 75%Reading package lists... 75%Reading package lists... 75%Reading package lists... 80%Reading package lists... 80%Reading package lists... 81%Reading package lists... 81%Reading package lists... 83%Reading package lists... 84%Reading package lists... 84%Reading package lists... 90%Reading package lists... 90%Reading package lists... 90%Reading package lists... 90%Reading package lists... 93%Reading package lists... 93%Reading package lists... 95%Reading package lists... 95%Reading package lists... 97%Reading package lists... 97%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
-Reading package lists... 0%Reading package lists... 100%Reading package lists... Done
-Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... Done
-Reading state information... 0% Reading state information... 0%Reading state information... Done
-The following packages were automatically installed and are no longer required:
-  bridge-utils libqt5xml5 python3-attr python3-docker python3-dockerpty python3-docopt python3-dotenv
-  python3-jsonschema python3-pyrsistent python3-texttable python3-websocket ubuntu-fan
-Use 'sudo apt autoremove' to remove them.
-The following additional packages will be installed:
-  docker-ce-rootless-extras libslirp0 slirp4netns
-Suggested packages:
-  aufs-tools cgroupfs-mount | cgroup-lite
-The following NEW packages will be installed:
-  containerd.io docker-buildx-plugin docker-ce docker-ce-cli docker-ce-rootless-extras docker-compose-plugin
-  libslirp0 slirp4netns
-0 upgraded, 8 newly installed, 0 to remove and 545 not upgraded.
-Need to get 123 MB of archives.
-After this operation, 441 MB of additional disk space will be used.
-0% [Working]            Get:1 http://apt.pop-os.org/ubuntu jammy/main amd64 libslirp0 amd64 4.6.1-1build1 [61.5 kB]
-0% [Connected to download.docker.com (18.160.143.69)] [1 libslirp0 11.4 kB/61.5 kB 19%]                                                                                       3% [Connected to download.docker.com (18.160.143.69)]                                                     Get:2 http://apt.pop-os.org/ubuntu jammy/universe amd64 slirp4netns amd64 1.0.1-2 [28.2 kB]
-3% [Connected to download.docker.com (18.160.143.69)] [2 slirp4netns 3,811 B/28.2 kB 14%]                                                                                         5% [Waiting for headers]                        Get:3 https://download.docker.com/linux/ubuntu jammy/stable amd64 containerd.io amd64 1.7.22-1 [29.5 MB]
-5% [3 containerd.io 15.9 kB/29.5 MB 0%]9% [3 containerd.io 5,308 kB/29.5 MB 18%]13% [3 containerd.io 12.9 MB/29.5 MB 44%]18% [3 containerd.io 19.6 MB/29.5 MB 66%]23% [3 containerd.io 26.8 MB/29.5 MB 91%]                                         27% [Working]             Get:4 https://download.docker.com/linux/ubuntu jammy/stable amd64 docker-buildx-plugin amd64 0.17.1-1~ubuntu.22.04~jammy [30.3 MB]
-27% [4 docker-buildx-plugin 15.9 kB/30.3 MB 0%]31% [4 docker-buildx-plugin 6,684 kB/30.3 MB 22%]                                                 36% [4 docker-buildx-plugin 13.7 MB/30.3 MB 45%]40% [4 docker-buildx-plugin 20.9 MB/30.3 MB 69%]45% [4 docker-buildx-plugin 27.9 MB/30.3 MB 92%]                                                Get:5 https://download.docker.com/linux/ubuntu jammy/stable amd64 docker-ce-cli amd64 5:27.3.1-1~ubuntu.22.04~jammy [15.0 MB]
-                                                49% [5 docker-ce-cli 131 kB/15.0 MB 1%]54% [5 docker-ce-cli 6,930 kB/15.0 MB 46%]                                          61% [Working]             Get:6 https://download.docker.com/linux/ubuntu jammy/stable amd64 docker-ce amd64 5:27.3.1-1~ubuntu.22.04~jammy [25.6 MB]
-61% [6 docker-ce 17.2 kB/25.6 MB 0%]66% [6 docker-ce 7,045 kB/25.6 MB 28%]                                                             13.2 MB/s 3s71% [6 docker-ce 14.5 MB/25.6 MB 57%]                                                              13.2 MB/s 2s76% [6 docker-ce 22.4 MB/25.6 MB 88%]                                                              13.2 MB/s 1s                                                                                                               Get:7 https://download.docker.com/linux/ubuntu jammy/stable amd64 docker-ce-rootless-extras amd64 5:27.3.1-1~ubuntu.22.04~jammy [9,589 kB]
-81% [7 docker-ce-rootless-extras 65.0 kB/9,589 kB 1%]                                              13.2 MB/s 1s85% [7 docker-ce-rootless-extras 6,537 kB/9,589 kB 68%]                                            13.2 MB/s 1s89% [Working]                                                                                      13.2 MB/s 0s                                                                                                               Get:8 https://download.docker.com/linux/ubuntu jammy/stable amd64 docker-compose-plugin amd64 2.29.7-1~ubuntu.22.04~jammy [12.7 MB]
-89% [8 docker-compose-plugin 37.9 kB/12.7 MB 0%]                                                   13.2 MB/s 0s93% [8 docker-compose-plugin 5,193 kB/12.7 MB 41%]                                                 13.2 MB/s 0s100% [Working]                                                                                     13.2 MB/s 0s                                                                                                               Fetched 123 MB in 9s (13.4 MB/s)
-Selecting previously unselected package containerd.io.
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 281658 files and directories currently installed.)
-Preparing to unpack .../0-containerd.io_1.7.22-1_amd64.deb ...
-Unpacking containerd.io (1.7.22-1) ...
-Selecting previously unselected package docker-buildx-plugin.
-Preparing to unpack .../1-docker-buildx-plugin_0.17.1-1~ubuntu.22.04~jammy_amd64.deb ...
-Unpacking docker-buildx-plugin (0.17.1-1~ubuntu.22.04~jammy) ...
-Selecting previously unselected package docker-ce-cli.
-Preparing to unpack .../2-docker-ce-cli_5%3a27.3.1-1~ubuntu.22.04~jammy_amd64.deb ...
-Unpacking docker-ce-cli (5:27.3.1-1~ubuntu.22.04~jammy) ...
-Selecting previously unselected package docker-ce.
-Preparing to unpack .../3-docker-ce_5%3a27.3.1-1~ubuntu.22.04~jammy_amd64.deb ...
-Unpacking docker-ce (5:27.3.1-1~ubuntu.22.04~jammy) ...
-Selecting previously unselected package docker-ce-rootless-extras.
-Preparing to unpack .../4-docker-ce-rootless-extras_5%3a27.3.1-1~ubuntu.22.04~jammy_amd64.deb ...
-Unpacking docker-ce-rootless-extras (5:27.3.1-1~ubuntu.22.04~jammy) ...
-Selecting previously unselected package docker-compose-plugin.
-Preparing to unpack .../5-docker-compose-plugin_2.29.7-1~ubuntu.22.04~jammy_amd64.deb ...
-Unpacking docker-compose-plugin (2.29.7-1~ubuntu.22.04~jammy) ...
-Selecting previously unselected package libslirp0:amd64.
-Preparing to unpack .../6-libslirp0_4.6.1-1build1_amd64.deb ...
-Unpacking libslirp0:amd64 (4.6.1-1build1) ...
-Selecting previously unselected package slirp4netns.
-Preparing to unpack .../7-slirp4netns_1.0.1-2_amd64.deb ...
-Unpacking slirp4netns (1.0.1-2) ...
-Setting up docker-buildx-plugin (0.17.1-1~ubuntu.22.04~jammy) ...
-Setting up containerd.io (1.7.22-1) ...
-Setting up docker-compose-plugin (2.29.7-1~ubuntu.22.04~jammy) ...
-Setting up docker-ce-cli (5:27.3.1-1~ubuntu.22.04~jammy) ...
-Setting up libslirp0:amd64 (4.6.1-1build1) ...
-Setting up docker-ce-rootless-extras (5:27.3.1-1~ubuntu.22.04~jammy) ...
-Setting up slirp4netns (1.0.1-2) ...
-Setting up docker-ce (5:27.3.1-1~ubuntu.22.04~jammy) ...
-Could not execute systemctl:  at /usr/bin/deb-systemd-invoke line 142.
-Processing triggers for man-db (2.10.2-1) ...
-Processing triggers for libc-bin (2.35-0ubuntu3.1) ...
-[1m[7m%[27m[1m[0m                                                                                                                k~/personal/dev\]7;file://pop-os/home/theprimeagen/personal/dev\[0m[27m[24m[J[01;32m➜  [36mdev[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004heecho $XDG_
-[0mXDG_CONFIG_DIRS      XDG_DATA_DIRS        XDG_SESSION_CLASS    XDG_SESSION_TYPE                        
-XDG_CONFIG_HOME      XDG_RUNTIME_DIR      XDG_SESSION_DESKTOP  XDG_VTNR                                
-[JXDG_CURRENT_DESKTOP  [JXDG_SEAT             [JXDG_SESSION_ID       [J                                      MMM[0m[27m[24m[22Cecho $XDG_[Kcon   OC  CON
-[JM[35CFIG_
-[J[J[0mXDG_CONFIG_DIRS  [JXDG_CONFIG_HOME[JM[0m[27m[24m[22Cecho $XDG_CONFIG_[KDIRS
-[J[7mXDG_CONFIG_DIRS[0m  [JXDG_CONFIG_HOME[JM[0m[27m[24m[22Cecho $XDG_CONFIG_DIRS[K
-[7mXDG_CONFIG_DIRS[0m  [7mXDG_CONFIG_DIRS[0m  M[0m[27m[24m[22Cecho $XDG_CONFIG_DIRS[KHOME[1m/[0m
-[17C[7mXDG_CONFIG_HOME[0mXDG_CONFIG_DIRS  M[0m[27m[24m[22Cecho $XDG_CONFIG_HOME[1m/[0m[K
-[JM[44C[0m [?1l>[?2004l
-[Jkecho\/home/theprimeagen/.config
-[1m[7m%[27m[1m[0m                                                                                                                k~/personal/dev\]7;file://pop-os/home/theprimeagen/personal/dev\[0m[27m[24m[J[01;32m➜  [36mdev[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004hecho $XDG_CONFIG_HOME           L[?2004l
-[1m[7m%[27m[1m[0m                                                                                                                k~/personal/dev\]7;file://pop-os/home/theprimeagen/personal/dev\[0m[27m[24m[J[01;31m➜  [36mdev[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h[?2004l
-[1m[7m%[27m[1m[0m                                                                                                                k~/personal/dev\]7;file://pop-os/home/theprimeagen/personal/dev\[0m[27m[24m[J[01;31m➜  [36mdev[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h../run --env[?1l>[?2004l
-k./run\./run: line 69: syntax error near unexpected token `else'
-./run: line 69: `else'
-[1m[7m%[27m[1m[0m                                                                                                                k~/personal/dev\]7;file://pop-os/home/theprimeagen/personal/dev\[0m[27m[24m[J[01;31m➜  [36mdev[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h[?2004l
-[1m[7m%[27m[1m[0m                                                                                                                k~/personal/dev\]7;file://pop-os/home/theprimeagen/personal/dev\[0m[27m[24m[J[01;31m➜  [36mdev[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h[?2004l
-[1m[7m%[27m[1m[0m                                                                                                                k~/personal/dev\]7;file://pop-os/home/theprimeagen/personal/dev\[0m[27m[24m[J[01;31m➜  [36mdev[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h./run --env[?1l>[?2004l
-k./run\grep: unrecognized option '--env'
-Usage: grep [OPTION]... PATTERNS [FILE]...
-Try 'grep --help' for more information.
-[1m[7m%[27m[1m[0m                                                                                                                k~/personal/dev\]7;file://pop-os/home/theprimeagen/personal/dev\[0m[27m[24m[J[01;32m➜  [36mdev[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h[?2004l
-[1m[7m%[27m[1m[0m                                                                                                                k~/personal/dev\]7;file://pop-os/home/theprimeagen/personal/dev\[0m[27m[24m[J[01;31m➜  [36mdev[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004hlls[?1l>[?2004l
-kls\[0m[01;34mcmd[0m         [01;34menv[0m       go.mod  main.go      [01;34mplaybooks[0m  [01;34mresources[0m  [01;34mruns[0m     [01;34mtest[0m
-Dockerfile  fly.toml  [01;32mmain[0m    [01;32mmanual_test[0m  README.md  [01;32mrun[0m        ssh.yml  typescript
-[1m[7m%[27m[1m[0m                                                                                                                k~/personal/dev\]7;file://pop-os/home/theprimeagen/personal/dev\[0m[27m[24m[J[01;32m➜  [36mdev[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h../run --env[?1l>[?2004l
-k./run\grep: unrecognized option '--env'
-Usage: grep [OPTION]... PATTERNS [FILE]...
-Try 'grep --help' for more information.
-[1m[7m%[27m[1m[0m                                                                                                                k~/personal/dev\]7;file://pop-os/home/theprimeagen/personal/dev\[0m[27m[24m[J[01;32m➜  [36mdev[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h[?2004l
-[1m[7m%[27m[1m[0m                                                                                                                k~/personal/dev\]7;file://pop-os/home/theprimeagen/personal/dev\[0m[27m[24m[J[01;31m➜  [36mdev[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h[?2004l
-[1m[7m%[27m[1m[0m                                                                                                                k~/personal/dev\]7;file://pop-os/home/theprimeagen/personal/dev\[0m[27m[24m[J[01;31m➜  [36mdev[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h../run[?1l>[?2004l
-k./run\0 running script: /home/theprimeagen/personal/dev/runs/docker
-/home/theprimeagen/personal/dev/runs/dev
-/home/theprimeagen/personal/dev/runs/common/install
-./run: line 35: /home/theprimeagen/personal/dev/runs/docker: Is a directory
-0 running script: /home/theprimeagen/personal/dev/runs/docker
-/home/theprimeagen/personal/dev/runs/dev
-/home/theprimeagen/personal/dev/runs/common/install
-./run: line 35: /home/theprimeagen/personal/dev/runs/docker: Is a directory
-0 running script: /home/theprimeagen/personal/dev/runs/docker
-/home/theprimeagen/personal/dev/runs/dev
-/home/theprimeagen/personal/dev/runs/common/install
-./run: line 35: /home/theprimeagen/personal/dev/runs/docker: Is a directory
-[1m[7m%[27m[1m[0m                                                                                                                k~/personal/dev\]7;file://pop-os/home/theprimeagen/personal/dev\[0m[27m[24m[J[01;31m➜  [36mdev[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h[?2004l
-[1m[7m%[27m[1m[0m                                                                                                                k~/personal/dev\]7;file://pop-os/home/theprimeagen/personal/dev\[0m[27m[24m[J[01;31m➜  [36mdev[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h./run[?1l>[?2004l
-k./run\running script: /home/theprimeagen/personal/dev/runs/docker
-/home/theprimeagen/personal/dev/runs/dev
-/home/theprimeagen/personal/dev/runs/common/install
-./run: line 35: /home/theprimeagen/personal/dev/runs/docker: Is a directory
-running script: /home/theprimeagen/personal/dev/runs/docker
-/home/theprimeagen/personal/dev/runs/dev
-/home/theprimeagen/personal/dev/runs/common/install
-./run: line 35: /home/theprimeagen/personal/dev/runs/docker: Is a directory
-running script: /home/theprimeagen/personal/dev/runs/docker
-/home/theprimeagen/personal/dev/runs/dev
-/home/theprimeagen/personal/dev/runs/common/install
-./run: line 35: /home/theprimeagen/personal/dev/runs/docker: Is a directory
-[1m[7m%[27m[1m[0m                                                                                                                k~/personal/dev\]7;file://pop-os/home/theprimeagen/personal/dev\[0m[27m[24m[J[01;31m➜  [36mdev[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h[?2004l
-[1m[7m%[27m[1m[0m                                                                                                                k~/personal/dev\]7;file://pop-os/home/theprimeagen/personal/dev\[0m[27m[24m[J[01;31m➜  [36mdev[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h./run[?1l>[?2004l
-k./run\running script: /home/theprimeagen/personal/dev/runs/docker
-/home/theprimeagen/personal/dev/runs/dev
-/home/theprimeagen/personal/dev/runs/common/install
-./run: line 35: /home/theprimeagen/personal/dev/runs/docker: Is a directory
-running script: /home/theprimeagen/personal/dev/runs/docker
-/home/theprimeagen/personal/dev/runs/dev
-/home/theprimeagen/personal/dev/runs/common/install
-./run: line 35: /home/theprimeagen/personal/dev/runs/docker: Is a directory
-running script: /home/theprimeagen/personal/dev/runs/docker
-/home/theprimeagen/personal/dev/runs/dev
-/home/theprimeagen/personal/dev/runs/common/install
-./run: line 35: /home/theprimeagen/personal/dev/runs/docker: Is a directory
-[1m[7m%[27m[1m[0m                                                                                                                k~/personal/dev\]7;file://pop-os/home/theprimeagen/personal/dev\[0m[27m[24m[J[01;31m➜  [36mdev[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h[?2004l
-[1m[7m%[27m[1m[0m                                                                                                                k~/personal/dev\]7;file://pop-os/home/theprimeagen/personal/dev\[0m[27m[24m[J[01;31m➜  [36mdev[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h./run[?1l>[?2004l
-k./run\running script: /home/theprimeagen/personal/dev/runs/docker
-/home/theprimeagen/personal/dev/runs/dev
-/home/theprimeagen/personal/dev/runs/common/install
-./run: line 35: /home/theprimeagen/personal/dev/runs/docker: Is a directory
-[1m[7m%[27m[1m[0m                                                                                                                k~/personal/dev\]7;file://pop-os/home/theprimeagen/personal/dev\[0m[27m[24m[J[01;31m➜  [36mdev[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h[?2004l
-[1m[7m%[27m[1m[0m                                                                                                                k~/personal/dev\]7;file://pop-os/home/theprimeagen/personal/dev\[0m[27m[24m[J[01;31m➜  [36mdev[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h[?2004l
-[1m[7m%[27m[1m[0m                                                                                                                k~/personal/dev\]7;file://pop-os/home/theprimeagen/personal/dev\[0m[27m[24m[J[01;31m➜  [36mdev[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h./run --env[?1l>[?2004l
-k./run\grep: unrecognized option '--env'
-Usage: grep [OPTION]... PATTERNS [FILE]...
-Try 'grep --help' for more information.
-running script: /install
-./run: line 35: /install: No such file or directory
-[1m[7m%[27m[1m[0m                                                                                                                k~/personal/dev\]7;file://pop-os/home/theprimeagen/personal/dev\[0m[27m[24m[J[01;31m➜  [36mdev[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h[?2004l
-[1m[7m%[27m[1m[0m                                                                                                                k~/personal/dev\]7;file://pop-os/home/theprimeagen/personal/dev\[0m[27m[24m[J[01;31m➜  [36mdev[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h./run --env[?1l>[?2004l
-k./run\env: -3 -- remove: -1
-grep: unrecognized option '--env'
-Usage: grep [OPTION]... PATTERNS [FILE]...
-Try 'grep --help' for more information.
-running script: /install
-./run: line 35: /install: No such file or directory
-[1m[7m%[27m[1m[0m                                                                                                                k~/personal/dev\]7;file://pop-os/home/theprimeagen/personal/dev\[0m[27m[24m[J[01;31m➜  [36mdev[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h[?2004l
-[1m[7m%[27m[1m[0m                                                                                                                k~/personal/dev\]7;file://pop-os/home/theprimeagen/personal/dev\[0m[27m[24m[J[01;31m➜  [36mdev[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h./run --env[?1l>[?2004l
-k./run\RUN: env: -3 -- remove: -1 -- grep: --env
-grep: unrecognized option '--env'
-Usage: grep [OPTION]... PATTERNS [FILE]...
-Try 'grep --help' for more information.
-running script: /install
-./run: line 36: /install: No such file or directory
-[1m[7m%[27m[1m[0m                                                                                                                k~/personal/dev\]7;file://pop-os/home/theprimeagen/personal/dev\[0m[27m[24m[J[01;31m➜  [36mdev[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h[?2004l
-[1m[7m%[27m[1m[0m                                                                                                                k~/personal/dev\]7;file://pop-os/home/theprimeagen/personal/dev\[0m[27m[24m[J[01;31m➜  [36mdev[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h./run --env[?1l>[?2004l
-k./run\ARG: --env
-RUN: env: -3 -- remove: -1 -- grep: --env
-grep: unrecognized option '--env'
-Usage: grep [OPTION]... PATTERNS [FILE]...
-Try 'grep --help' for more information.
-running script: /install
-./run: line 37: /install: No such file or directory
-[1m[7m%[27m[1m[0m                                                                                                                k~/personal/dev\]7;file://pop-os/home/theprimeagen/personal/dev\[0m[27m[24m[J[01;31m➜  [36mdev[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h[?2004l
-[1m[7m%[27m[1m[0m                                                                                                                k~/personal/dev\]7;file://pop-os/home/theprimeagen/personal/dev\[0m[27m[24m[J[01;31m➜  [36mdev[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h::w[?1l>[?2004l
-k:w\zsh: command not found: :w
-[1m[7m%[27m[1m[0m                                                                                                                k~/personal/dev\]7;file://pop-os/home/theprimeagen/personal/dev\[0m[27m[24m[J[01;31m➜  [36mdev[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h[?2004l
-[1m[7m%[27m[1m[0m                                                                                                                k~/personal/dev\]7;file://pop-os/home/theprimeagen/personal/dev\[0m[27m[24m[J[01;31m➜  [36mdev[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h:w[?1l>[?2004l
-k:w\zsh: command not found: :w
-[1m[7m%[27m[1m[0m                                                                                                                k~/personal/dev\]7;file://pop-os/home/theprimeagen/personal/dev\[0m[27m[24m[J[01;31m➜  [36mdev[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h:w./run --env[?1l>[?2004l
-k./run\ARG: "--env"
-RUN: env: -3 -- remove: -1 -- grep: --env
-grep: unrecognized option '--env'
-Usage: grep [OPTION]... PATTERNS [FILE]...
-Try 'grep --help' for more information.
-running script: /install
-./run: line 37: /install: No such file or directory
-[1m[7m%[27m[1m[0m                                                                                                                k~/personal/dev\]7;file://pop-os/home/theprimeagen/personal/dev\[0m[27m[24m[J[01;31m➜  [36mdev[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h./run --env[?1l>[?2004l
-k./run\ARG: "--env"
-RUN: env: -3 -- remove: -1 -- grep: --env
-grep: unrecognized option '--env'
-Usage: grep [OPTION]... PATTERNS [FILE]...
-Try 'grep --help' for more information.
-running script: /install
-./run: line 37: /install: No such file or directory
-[1m[7m%[27m[1m[0m                                                                                                                k~/personal/dev\]7;file://pop-os/home/theprimeagen/personal/dev\[0m[27m[24m[J[01;31m➜  [36mdev[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h[?2004l
-[1m[7m%[27m[1m[0m                                                                                                                k~/personal/dev\]7;file://pop-os/home/theprimeagen/personal/dev\[0m[27m[24m[J[01;31m➜  [36mdev[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h./run --env[?1l>[?2004l
-k./run\ARG: "--env"
-RUN: env: 1 -- remove: 0 -- grep: 
-removing xdg_config
-    removing: /home/theprimeagen/.config//home/theprimeagen/personal/dev/env/.config/i3status
-    removing: /home/theprimeagen/.config//home/theprimeagen/personal/dev/env/.config/i3
-    removing: /home/theprimeagen/.config//home/theprimeagen/personal/dev/env/.config/nvim
-    removing: /home/theprimeagen/.config//home/theprimeagen/personal/dev/env/.config/personal
-    removing: /home/theprimeagen/.config//home/theprimeagen/personal/dev/env/.config/tmux
-removing locals
-./run: line 58: ${~/.locals%/}/${l}: bad substitution
-[1m[7m%[27m[1m[0m                                                                                                                k~/personal/dev\]7;file://pop-os/home/theprimeagen/personal/dev\[0m[27m[24m[J[01;31m➜  [36mdev[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h[0m[27m[24m[J[01;31m➜  [36mdev[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [0m[27m[24m[J[01;31m➜  [36mdev[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [0m[27m[24m[J[01;31m➜  [36mdev[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [?2004l
-[1m[7m%[27m[1m[0m                                                                                                                k~/personal/dev\]7;file://pop-os/home/theprimeagen/personal/dev\[0m[27m[24m[J[01;31m➜  [36mdev[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h./run --env[?1l>[?2004l
-k./run\ARG: "--env"
-RUN: env: 1 -- remove: 0 -- grep: 
-removing xdg_config
-    removing: /home/theprimeagen/.config//home/theprimeagen/personal/dev/env/.config/i3status
-    removing: /home/theprimeagen/.config//home/theprimeagen/personal/dev/env/.config/i3
-    removing: /home/theprimeagen/.config//home/theprimeagen/personal/dev/env/.config/nvim
-    removing: /home/theprimeagen/.config//home/theprimeagen/personal/dev/env/.config/personal
-    removing: /home/theprimeagen/.config//home/theprimeagen/personal/dev/env/.config/tmux
-removing locals
-    removing: ~/.local//home/theprimeagen/personal/dev/env/.local/bin
-removing zsh
-[1m[7m%[27m[1m[0m                                                                                                                k~/personal/dev\]7;file://pop-os/home/theprimeagen/personal/dev\[0m[27m[24m[J[01;32m➜  [36mdev[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004hccat ~./  /@ .zsh
-[0m.zshenv                [01;32m.zsh_profile[0m*          [01;32m.zshrc.pre-oh-my-zsh[0m*                       
-[J.zsh_history           [J[01;32m.zshrc[0m*                [J                                          MM[0m[27m[24m[22Ccat ~/.zsh[Kenv
-[7m.zshenv              [0m  [01;32m.zsh_profile[0m*          [01;32m.zshrc.pre-oh-my-zsh[0m*                       [K
-[J.zsh_history           [J[01;32m.zshrc[0m*                [J                                          MM[0m[27m[24m[22Ccat ~/.zshenv[K
-[7m.zshenv              [0m  [7m.zshenv              [0m  M[0m[27m[24m[22Ccat ~/.zshenv[K_history
-[0m.zshenv                [1B[7m.zsh_history         [0m  MM[0m[27m[24m[22Ccat ~/.zsh_history[Kprofile
-[23C[7m.zsh_profile*        [0m  [1B.zsh_history           MM[0m[27m[24m[22Ccat ~/.zsh_profile[K[8Drc      
-[23C[01;32m.zsh_profile[0m*          [1B[23C[7m.zshrc*              [0mMM[0m[27m[24m[22Ccat ~/.zshrc[K
-[JM[34C[1m [0m[0m [?1l>[?2004l
-[Jkcat\# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-
-# Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
-
-# Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
-
-# Set list of themes to pick from when loading at random
-# Setting this variable when ZSH_THEME=random will cause zsh to load
-# a theme from this variable instead of looking in $ZSH/themes/
-# If set to an empty array, this variable will have no effect.
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
-
-# Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
-
-# Uncomment the following line to use hyphen-insensitive completion.
-# Case-sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
-
-# Uncomment one of the following lines to change the auto-update behavior
-# zstyle ':omz:update' mode disabled  # disable automatic updates
-# zstyle ':omz:update' mode auto      # update automatically without asking
-# zstyle ':omz:update' mode reminder  # just remind me to update when it's time
-
-# Uncomment the following line to change how often to auto-update (in days).
-# zstyle ':omz:update' frequency 13
-
-# Uncomment the following line if pasting URLs and other text is messed up.
-# DISABLE_MAGIC_FUNCTIONS="true"
-
-# Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
-
-# Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
-
-# Uncomment the following line to display red dots whilst waiting for completion.
-# You can also set it to another string to have that shown instead of the default red dots.
-# e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
-# Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
-# COMPLETION_WAITING_DOTS="true"
-
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
-
-# Uncomment the following line if you want to change the command execution time
-# stamp shown in the history command output.
-# You can set one of the optional three formats:
-# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# or set a custom format using the strftime function format specifications,
-# see 'man strftime' for details.
-# HIST_STAMPS="mm/dd/yyyy"
-
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
-
-# Which plugins would you like to load?
-# Standard plugins can be found in $ZSH/plugins/
-# Custom plugins may be added to $ZSH_CUSTOM/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
-
-source $ZSH/oh-my-zsh.sh
-
-# User configuration
-
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-source ~/.zsh_profile
-
-# bun completions
-[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
-
-# Bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
-
-# pnpm
-export PNPM_HOME="$HOME/.local/share/pnpm"
-export PATH="$PNPM_HOME:$PATH"
-# pnpm end
-# Turso
-export PATH="$HOME/.turso:$PATH"
-
-[1m[7m%[27m[1m[0m                                                                                                                k~/personal/dev\]7;file://pop-os/home/theprimeagen/personal/dev\[0m[27m[24m[J[01;32m➜  [36mdev[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004hlls -la[?1l>[?2004l
-kls\total 7080
-drwxrwxr-x  9 theprimeagen theprimeagen    4096 Oct 15 18:43 [0m[01;34m.[0m
-drwxrwxr-x 54 theprimeagen theprimeagen    4096 Oct 15 17:24 [01;34m..[0m
-drwxrwxr-x  2 theprimeagen theprimeagen    4096 Mar 28  2024 [01;34mcmd[0m
--rw-------  1 theprimeagen theprimeagen     306 Mar 28  2024 Dockerfile
--rw-rw-r--  1 theprimeagen theprimeagen      70 Mar 28  2024 .dockerignore
-drwxrwxr-x  4 theprimeagen theprimeagen    4096 Oct 15 18:25 [01;34menv[0m
--rw-rw-r--  1 theprimeagen theprimeagen     569 Mar 28  2024 fly.toml
-drwxrwxr-x 10 theprimeagen theprimeagen    4096 Aug 21 07:05 [01;34m.git[0m
--rw-rw-r--  1 theprimeagen theprimeagen      12 Mar 28  2024 .gitignore
--rw-rw-r--  1 theprimeagen theprimeagen     104 Apr  1  2024 .gitmodules
--rw-rw-r--  1 theprimeagen theprimeagen      37 Mar 28  2024 go.mod
--rwxrwxr-x  1 theprimeagen theprimeagen 7070058 Mar 28  2024 [01;32mmain[0m
--rw-rw-r--  1 theprimeagen theprimeagen     367 Mar 28  2024 main.go
--rwxrwxr-x  1 theprimeagen theprimeagen      86 Mar 28  2024 [01;32mmanual_test[0m
-drwxrwxr-x  2 theprimeagen theprimeagen    4096 Oct 15 18:18 [01;34mplaybooks[0m
--rw-rw-r--  1 theprimeagen theprimeagen    1489 Mar 28  2024 README.md
-drwxrwxr-x  2 theprimeagen theprimeagen    4096 Apr  2  2024 [01;34mresources[0m
--rwxrwxr-x  1 theprimeagen theprimeagen    1671 Oct 15 18:43 [01;32mrun[0m
-drwxrwxr-x  5 theprimeagen theprimeagen    4096 Oct 15 18:14 [01;34mruns[0m
--rw-rw-r--  1 theprimeagen theprimeagen     386 Mar 28  2024 ssh.yml
-drwxrwxr-x  4 theprimeagen theprimeagen    4096 Mar 27  2024 [01;34mtest[0m
--rw-rw-r--  1 theprimeagen theprimeagen   90112 Oct 15 18:44 typescript
-[1m[7m%[27m[1m[0m                                                                                                                k~/personal/dev\]7;file://pop-os/home/theprimeagen/personal/dev\[0m[27m[24m[J[01;32m➜  [36mdev[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h[?2004l
-[1m[7m%[27m[1m[0m                                                                                                                k~/personal/dev\]7;file://pop-os/home/theprimeagen/personal/dev\[0m[27m[24m[J[01;31m➜  [36mdev[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004hls -lacat ~/.zshrc[12D./run --env [?1l>[?2004l
-k./run\ARG: "--env"
-RUN: env: 1 -- remove: 0 -- grep: 
-removing xdg_config
-    removing: /home/theprimeagen/.config//home/theprimeagen/personal/dev/env/.config/i3status
-    removing: /home/theprimeagen/.config//home/theprimeagen/personal/dev/env/.config/i3
-    removing: /home/theprimeagen/.config//home/theprimeagen/personal/dev/env/.config/nvim
-    removing: /home/theprimeagen/.config//home/theprimeagen/personal/dev/env/.config/personal
-    removing: /home/theprimeagen/.config//home/theprimeagen/personal/dev/env/.config/tmux
-removing locals
-    removing: ~/.local//home/theprimeagen/personal/dev/env/.local/bin
-removing zsh
-[1m[7m%[27m[1m[0m                                                                                                                k~/personal/dev\]7;file://pop-os/home/theprimeagen/personal/dev\[0m[27m[24m[J[01;32m➜  [36mdev[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004hlls [?2004l
-[1m[7m%[27m[1m[0m                                                                                                                k~/personal/dev\]7;file://pop-os/home/theprimeagen/personal/dev\[0m[27m[24m[J[01;31m➜  [36mdev[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h[?2004l
-[1m[7m%[27m[1m[0m                                                                                                                k~/personal/dev\]7;file://pop-os/home/theprimeagen/personal/dev\[0m[27m[24m[J[01;31m➜  [36mdev[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h[?2004l
-[1m[7m%[27m[1m[0m                              

@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
-alias asdf="setxkbmap real-prog-dvorak"
+
+# aint no world i remember this...
+# rage incoming next computer restart
+alias asdfasdf="setxkbmap real-prog-dvorak"
 
 setxkbmap -option caps:ctrl_modifier
-

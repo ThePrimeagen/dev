@@ -1,3 +1,6 @@
 [submodule "env/.config/nvim"]
 	path = env/.config/nvim
 	url = git@github.com:ThePrimeagen/init.lua.git
+[submodule "tmux-sessionizer"]
+	path = tmux-sessionizer
+	url = git@github.com:ThePrimeagen/tmux-sessionizer.git

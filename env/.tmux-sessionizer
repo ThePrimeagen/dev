@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+# i do this to every directory i am in
+# 1 is neovim
+# 2 is where i run commands
+#
+# could be cool!!
+# this means i could create a neovim plugin to shoot commands out to "scartch"
+tmux new-window -dn scratch
+vim .
+
