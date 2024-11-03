@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 dry_run="0"
-script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
+
+if [ -z "$DEV_ENV_HOME" ]; then
+    echo "env var $DEV_ENV_HOME needs to be present"
+    exit 1
+fi
 
 if [[ $1 == "--dry" ]]; then
     dry_run="1"
@@ -40,7 +44,7 @@ update_files() {
 }
 
 copy() {
-    log "removing: $2 -- DRY_RUN = \"$dry_run\""
+    log "removing: $2"
     if [[ $dry_run == "0" ]]; then
         rm $2
     fi
@@ -50,16 +54,13 @@ copy() {
     fi
 }
 
-pushd $script_dir &> /dev/null
-update_files env/.config $XDG_CONFIG_HOME
-update_files env/.local $HOME/.local
+update_files $DEV_ENV_HOME/env/.config $XDG_CONFIG_HOME
+update_files $DEV_ENV_HOME/env/.local $HOME/.local
 
-copy tmux-sessionizer/tmux-sessionizer $HOME/.local/bin/tmux-sessionizer
-copy env/.zsh_profile $HOME/.zsh_profile
-copy env/.zshrc $HOME/.zshrc
-copy env/.xprofile $HOME/.xprofile
-copy env/.tmux-sessionizer $HOME/.tmux-sessionizer
-
-popd &> /dev/null
-
+copy $DEV_ENV_HOME/tmux-sessionizer/tmux-sessionizer $HOME/.local/bin/tmux-sessionizer
+copy $DEV_ENV_HOME/env/.zsh_profile $HOME/.zsh_profile
+copy $DEV_ENV_HOME/env/.zshrc $HOME/.zshrc
+copy $DEV_ENV_HOME/env/.xprofile $HOME/.xprofile
+copy $DEV_ENV_HOME/env/.tmux-sessionizer $HOME/.tmux-sessionizer
+copy $DEV_ENV_HOME/dev-env $HOME/.local/bin/dev-env
 
