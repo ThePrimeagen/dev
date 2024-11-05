@@ -5,8 +5,9 @@ PERSONAL=$XDG_CONFIG_HOME/personal
 for i in `find -L $PERSONAL`; do
     source $i
 done
-# source /usr/share/doc/fzf/examples/key-bindings.zsh
-# source /usr/share/doc/fzf/examples/completion.zsh
+
+## All that sweet sweet fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 export GOPATH=$HOME/.local/go
 export GIT_EDITOR=$VIM
