@@ -50,6 +50,8 @@ addToPathFront $HOME/.local/.npm-global/bin
 addToPathFront $HOME/.local/scripts
 addToPathFront $HOME/.local/bin
 addToPathFront $HOME/.local/n/bin/
+addToPathFront $HOME/.local/apps/
+
 # do i need this one?
 addToPathFront $HOME/.local/go/bin
 addToPathFront /usr/local/go/bin

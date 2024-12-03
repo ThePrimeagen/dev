@@ -6,6 +6,11 @@
 #
 # could be cool!!
 # this means i could create a neovim plugin to shoot commands out to "scartch"
+if [[ "$(pwd)" == $HOME/personal ]]; then
+    clear
+    return
+fi
 tmux new-window -dn scratch
 vim .
+clear
 
