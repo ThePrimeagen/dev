@@ -11,13 +11,17 @@
         dest: /tmp/keyring.deb 
         checksum: sha256:f9bb4340b5ce0ded29b7e014ee9ce788006e9bbfe31e96c09b2118ab91fca734
 
-    - name: Return motd to registered var
+    - name: Install sur5r's i3wm signing key
       become: true
-      ansible.builtin.command: apt install /tmp/keyring.deb
+      ansible.builtin.apt:
+        deb: /tmp/keyring.deb
 
-    - name: Return motd to registered var
+    - name: Add sur5r's i3 repository into sources list
       become: true
-      ansible.builtin.command: echo "deb http://debian.sur5r.net/i3/ $(grep '^DISTRIB_CODENAME=' /etc/lsb-release | cut -f2 -d=) universe" | tee /etc/apt/sources.list.d/sur5r-i3.list
+      ansible.builtin.apt_repository:
+        repo: deb http://debian.sur5r.net/i3/ {{ ansible_distribution_release }} universe
+        state: present
+        filename: sur5r-i3
 
     - name: Install i3
       become: true
