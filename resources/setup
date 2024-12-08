@@ -3,7 +3,7 @@ sudo apt update
 sudo apt install software-properties-common
 sudo add-apt-repository --yes --update ppa:ansible/ansible
 sudo apt install ansible
-git clone https://github.com/ThePrimeagen/dev $1
+git clone https://github.com/Adamkaram/dev $1
 
 
 
