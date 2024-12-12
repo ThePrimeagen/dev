@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
 
+script_dir="$(cd $(dirname "${BASH_SOURCE[0]}") && pwd)"
+
 if [ ! -f /usr/share/X11/xkb/symbols/real-prog-dvorak ]; then
 	echo "real-prog-dvorak doesn't exist, copying over"
-	cp ./resources/real-prog-dvorak /usr/share/X11/xkb/symbols
+	cp $script_dir/resources/real-prog-dvorak /usr/share/X11/xkb/symbols
 fi
 
 
