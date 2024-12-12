@@ -1,5 +1,3 @@
-// based on Michael Paulson's poor ideas.
-
 partial alphanumeric_keys
 xkb_symbols "real-prog-dvorak" {
 
