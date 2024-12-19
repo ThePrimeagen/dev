@@ -1,18 +1,14 @@
 #!/usr/bin/env bash
 dry_run="0"
 
-script_dir=$(cd $(dirname "${BASH_SOURCE[0]}") && pwd)
-echo $script_dir
-
 if [ -z "$XDG_CONFIG_HOME" ]; then
     echo "no xdg config hom"
     echo "using ~/.config"
     XDG_CONFIG_HOME=$HOME/.config
 fi
 
-
-if [ -z "$script_dir" ]; then
-    echo "env var $script_dir needs to be present"
+if [ -z "$DEV_ENV" ]; then
+    echo "env var DEV_ENV needs to be present"
     exit 1
 fi
 
@@ -28,7 +24,7 @@ log() {
     fi
 }
 
-log "env: $script_dir"
+log "env: $DEV_ENV"
 
 update_files() {
     log "copying over files from: $1"
@@ -64,14 +60,14 @@ copy() {
     fi
 }
 
-update_files $script_dir/env/.config $XDG_CONFIG_HOME
-update_files $script_dir/env/.local $HOME/.local
+update_files $DEV_ENV/env/.config $XDG_CONFIG_HOME
+update_files $DEV_ENV/env/.local $HOME/.local
 
-copy $script_dir/tmux-sessionizer/tmux-sessionizer $HOME/.local/scripts/tmux-sessionizer
-copy $script_dir/env/.zsh_profile $HOME/.zsh_profile
-copy $script_dir/env/.zshrc $HOME/.zshrc
-copy $script_dir/env/.xprofile $HOME/.xprofile
-copy $script_dir/env/.tmux-sessionizer $HOME/.tmux-sessionizer
-copy $script_dir/dev-env $HOME/.local/scripts/dev-env
-copy $script_dir/tmux-dev-prod $HOME/.local/bin/tmux-dev-prod-course-ready
+copy $DEV_ENV/tmux-sessionizer/tmux-sessionizer $HOME/.local/scripts/tmux-sessionizer
+copy $DEV_ENV/env/.zsh_profile $HOME/.zsh_profile
+copy $DEV_ENV/env/.zshrc $HOME/.zshrc
+copy $DEV_ENV/env/.xprofile $HOME/.xprofile
+copy $DEV_ENV/env/.tmux-sessionizer $HOME/.tmux-sessionizer
+copy $DEV_ENV/dev-env $HOME/.local/scripts/dev-env
+copy $DEV_ENV/tmux-dev-prod $HOME/.local/bin/tmux-dev-prod-course-ready
 

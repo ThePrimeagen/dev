@@ -4,7 +4,9 @@ script_dir="$(cd $(dirname "${BASH_SOURCE[0]}") && pwd)"
 
 if [ ! -f /usr/share/X11/xkb/symbols/real-prog-dvorak ]; then
 	echo "real-prog-dvorak doesn't exist, copying over"
-	cp $script_dir/resources/real-prog-dvorak /usr/share/X11/xkb/symbols
+	sudo cp $DEV_ENV/resources/real-prog-dvorak /usr/share/X11/xkb/symbols
+else
+	echo "real-prog exists"
 fi
 
 
@@ -42,7 +44,7 @@ remaining=$(cat /usr/share/X11/xkb/rules/evdev.xml | tail -$tail_lines)
 msg="$up_to
 $dvorak_env
 $remaining
-" 
+"
 
 echo "keyboard: $msg"
 echo $msg | sudo tee /usr/share/X11/xkb/rules/evdev.xml

@@ -1,6 +1,11 @@
 #!/usr/bin/env bash
 script_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 
+if [ -z "$DEV_ENV" ]; then
+    echo "env var DEV_ENV needs to be present"
+    exit 1
+fi
+
 grep=""
 dry_run="0"
 
