@@ -3,6 +3,9 @@
 # rust btw
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
+git config --global user.email "the.primeagain@gmail.com"
+git config --global user.name "Prime Again"
+
 # go??? i need to install this
 # lua btw
 cargo install stylua
