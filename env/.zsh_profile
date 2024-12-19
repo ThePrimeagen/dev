@@ -50,6 +50,7 @@ addToPathFront $HOME/.zig
 addToPathFront $HOME/.local/.npm-global/bin
 addToPathFront $HOME/.local/scripts
 addToPathFront $HOME/.local/bin
+addToPathFront $HOME/.local/npm/bin
 addToPathFront $HOME/.local/n/bin/
 addToPathFront $HOME/.local/apps/
 
