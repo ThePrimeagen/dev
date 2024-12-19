@@ -39,9 +39,11 @@ tail_lines=$(($total_lines - $layout_list))
 up_to=$(cat /usr/share/X11/xkb/rules/evdev.xml | head -$layout_list)
 remaining=$(cat /usr/share/X11/xkb/rules/evdev.xml | tail -$tail_lines)
 
-echo "$up_to
+msg="$up_to
 $dvorak_env
 $remaining
-" > /usr/share/X11/xkb/rules/evdev.xml
+" 
 
+echo "keyboard: $msg"
+echo $msg | sudo tee /usr/share/X11/xkb/rules/evdev.xml
 echo "don't forget to log out to let these changes take effect"

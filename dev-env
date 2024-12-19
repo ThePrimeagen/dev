@@ -2,6 +2,14 @@
 dry_run="0"
 
 script_dir=$(cd $(dirname "${BASH_SOURCE[0]}") && pwd)
+echo $script_dir
+
+if [ -z "$XDG_CONFIG_HOME" ]; then
+    echo "no xdg config hom"
+    echo "using ~/.config"
+    XDG_CONFIG_HOME=$HOME/.config
+fi
+
 
 if [ -z "$script_dir" ]; then
     echo "env var $script_dir needs to be present"
