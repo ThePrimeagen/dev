@@ -67,11 +67,11 @@ copy() {
 update_files $script_dir/env/.config $XDG_CONFIG_HOME
 update_files $script_dir/env/.local $HOME/.local
 
-copy $script_dir/tmux-sessionizer/tmux-sessionizer $HOME/.local/bin/tmux-sessionizer
+copy $script_dir/tmux-sessionizer/tmux-sessionizer $HOME/.local/scripts/tmux-sessionizer
 copy $script_dir/env/.zsh_profile $HOME/.zsh_profile
 copy $script_dir/env/.zshrc $HOME/.zshrc
 copy $script_dir/env/.xprofile $HOME/.xprofile
 copy $script_dir/env/.tmux-sessionizer $HOME/.tmux-sessionizer
-copy $script_dir/dev-env $HOME/.local/bin/dev-env
+copy $script_dir/dev-env $HOME/.local/scripts/dev-env
 copy $script_dir/tmux-dev-prod $HOME/.local/bin/tmux-dev-prod-course-ready
 

@@ -114,8 +114,3 @@ export PATH="$PNPM_HOME:$PATH"
 # pnpm end
 # Turso
 export PATH="$HOME/.turso:$PATH"
-
-
-# dune
-source $HOME/.dune/env/env.zsh
-

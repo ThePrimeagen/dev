@@ -25,5 +25,6 @@ git clone https://github.com/ThePrimeagen/harpoon.git $HOME/personal/harpoon
 git clone https://github.com/ThePrimeagen/vim-apm.git $HOME/personal/vim-apm
 git clone https://github.com/ThePrimeagen/vim-with-me.git $HOME/personal/vim-with-me
 git clone https://github.com/ThePrimeagen/vim-arcade.git $HOME/personal/vim-arcade
+git clone https://github.com/ThePrimeagen/caleb.git $HOME/personal/caleb
 git clone https://github.com/nvim-lua/plenary.nvim.git $HOME/personal/plenary
 
