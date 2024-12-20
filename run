@@ -6,6 +6,10 @@ if [ -z "$DEV_ENV" ]; then
     exit 1
 fi
 
+# if i just did DEV_ENV=$(pwd) ./run then this is needed for the rest of the
+# scripts
+export DEV_ENV="$DEV_ENV"
+
 grep=""
 dry_run="0"
 
