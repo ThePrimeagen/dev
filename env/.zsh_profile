@@ -53,6 +53,7 @@ addToPathFront $HOME/.local/bin
 addToPathFront $HOME/.local/npm/bin
 addToPathFront $HOME/.local/n/bin/
 addToPathFront $HOME/.local/apps/
+addToPathFront $HOME/.local/zig-linux-x86_64-0.13.0
 
 # do i need this one?
 addToPathFront $HOME/.local/go/bin
@@ -64,3 +65,5 @@ addToPath $HOME/personal/ghostty/zig-out/bin
 
 # thanks gt
 alias gt='NODE_OPTIONS="--no-deprecation" gt'
+
+source ~/.php_profile

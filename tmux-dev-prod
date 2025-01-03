@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-
-cp $DEV_ENV_HOME/env/.tmux-dev-prod_DO_NOT_USE.conf $HOME/.config/tmux/tmux.conf
-
