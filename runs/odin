@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+echo "--------------------------------------------------------"
+echo ""
+echo ""
+echo "Install odin: https://github.com/odin-lang/Odin/releases"
+echo ""
+echo "tar -xvzf and move the directory to ~/.local/odin"
+echo ""
+echo "press enter when completed"
+read
+
+

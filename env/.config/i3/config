@@ -213,9 +213,6 @@ bar {
 # ------------------------------------------
 exec --no-startup-id nm-applet
 
-bindsym $mod+Shift+s exec --no-startup-id ~/dotfiles/bin/monitor
-bindsym $mod+Shift+n exec --no-startup-id ~/dotfiles/bin/resolution
-
 # FKeys
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
@@ -236,3 +233,7 @@ bindsym $mod+m move workspace to output left
 bindsym $mod+Shift+period exec systemctl suspend
 
 
+# Stream Management
+bindsym $mod+Shift+period exec systemctl suspend
+
+bindsym $mod+Shift+p exec --no-startup-id ~/.local/apps/play_next_bits
