@@ -4,6 +4,7 @@ theme = rose-pine
 background = 000000
 
 shell-integration-features = no-cursor,no-sudo,no-title
+gtk-titlebar = false
 
 # what is a prefix?
 # keybind = ctrl+d=scroll_page_fractional:0.5
