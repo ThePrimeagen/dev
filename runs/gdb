@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# via the install script
+## using curl
+bash -c "$(curl -fsSL https://gef.blah.cat/sh)"
