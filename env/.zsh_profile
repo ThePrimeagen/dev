@@ -41,7 +41,7 @@ addToPath() {
 }
 
 addToPathFront() {
-    if [[ "$PATH" != *"$1"* ]]; then
+    if [[ ! -z "$2" ]] || [[ "$PATH" != *"$1"* ]]; then
         export PATH=$1:$PATH
     fi
 }
@@ -65,7 +65,7 @@ addToPath $HOME/.cargo/bin
 addToPath $HOME/personal/ghostty/zig-out/bin
 addToPath $HOME/.local/personal
 addToPath $HOME/.sst/bin
-addToPathFront $HOME/.local/zig
+addToPathFront $HOME/.local/zig true # some how zig-0.13 just keeps getting added and i CANNOT find it anywhere
 
 # thanks gt
 alias gt='NODE_OPTIONS="--no-deprecation" gt'
