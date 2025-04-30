@@ -1,6 +1,6 @@
 input "type:keyboard" {
-    xkb_layout custom
-    xkb_file ~/.xkb/keymap/custom.xkb
+    xkb_layout real_prog_dvorak
+    xkb_file ~/.config/xkb/symbols/real_prog_dvorak
     xkb_options grp:alt_shift_toggle
 }
 
