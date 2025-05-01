@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 
-sudo pacman -S --noconfirm gimp tldr
+sudo pacman -S --noconfirm --needed gimp tldr
+sudo pacman -S --noconfirm --needed go
