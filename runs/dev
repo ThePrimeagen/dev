@@ -1,24 +1,3 @@
 #!/usr/bin/env bash
 
-# rust btw
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-
-git config --global user.email "the.primeagain@gmail.com"
-git config --global user.name "Prime Again"
-
-# go??? i need to install this
-# lua btw
-cargo install stylua
-
-# luarocks
-pushd /tmp/luarocks-3.11.0
-(
-    wget --output-document /tmp/luarocks.tar.gz https://luarocks.org/releases/luarocks-3.11.0.tar.gz
-    tar zxpf /tmp/luarocks.tar.gz -C /tmp
-    cd
-    ./configure && make && sudo make install
-)
-popd
-
-luarocks install luacheck
-
+sudo pacman -S --noconfirm gimp tldr

@@ -1,25 +1,13 @@
 #!/usr/bin/env bash
 
-version="v0.10.2"
-if [ ! -z $NVIM_VERSION ]; then
-    version="$NVIM_VERSION"
-fi
+sudo pacman -S --noconfirm neovim lua51 luarocks
 
-echo "version: \"$version\""
-
-# neovim btw
-if [ ! -d $HOME/neovim ]; then
-    git clone https://github.com/neovim/neovim.git $HOME/neovim
-fi
-
-sudo apt -y install cmake gettext lua5.1 liblua5.1-0-dev
-
-git -C ~/neovim fetch --all
-git -C ~/neovim checkout $version
-
-make -C ~/neovim clean
-make -C ~/neovim CMAKE_BUILD_TYPE=RelWithDebInfo
-sudo make -C ~/neovim install
+rm -rf $HOME/personal/harpoon
+rm -rf $HOME/personal/vim-apm
+rm -rf $HOME/personal/vim-with-me
+rm -rf $HOME/personal/vim-arcade
+rm -rf $HOME/personal/unnamed_game_1
+rm -rf $HOME/personal/plenary
 
 git clone https://github.com/ThePrimeagen/harpoon.git $HOME/personal/harpoon
 cd $HOME/personal/harpoon
@@ -30,10 +18,7 @@ git clone https://github.com/ThePrimeagen/vim-apm.git $HOME/personal/vim-apm
 git clone https://github.com/ThePrimeagen/vim-with-me.git $HOME/personal/vim-with-me
 git clone https://github.com/ThePrimeagen/vim-arcade.git $HOME/personal/vim-arcade
 git clone https://github.com/ThePrimeagen/caleb.git $HOME/personal/caleb
+git clone git@github.com:ThePrimeagen/unnamed_game_1.git $HOME/personal/unnamed_game_1
 git clone https://github.com/nvim-lua/plenary.nvim.git $HOME/personal/plenary
 
-wget https://luarocks.org/releases/luarocks-3.11.1.tar.gz
-tar zxpf luarocks-3.11.1.tar.gz
-cd luarocks-3.11.1
-./configure && make && sudo make install
 sudo luarocks install luacheck
