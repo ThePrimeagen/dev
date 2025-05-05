@@ -34,7 +34,7 @@
     "max-length": 50
   },
   "clock": {
-    "timezone": "America/Sao_Paulo",
+    "timezone": "America/Denver",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
     "format": "{:%d/%m/%Y - %H:%M:%S}"
   },

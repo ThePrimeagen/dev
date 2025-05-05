@@ -3,7 +3,9 @@
 sudo pacman -S --noconfirm --needed gimp tldr go fzf rofi-wayland
 go install github.com/air-verse/air@latest
 sudo pacman -S love --noconfirm --needed
-sudo pacman -S ttf-font-awesome waybar ttf-jetbrains-mono-nerd
+sudo pacman -S ttf-font-awesome waybar ttf-jetbrains-mono-nerd ttf-nerd-fonts-symbols
 sudo pacman -S hyprlock --noconfirm --needed
+sudo pacman -S ghostty
+sudo pacman -S hyprpaper
 paru -Syu wlogout-git --noconfirm --needed
 
