@@ -29,7 +29,7 @@
   "clock": {
     "timezone": "America/Denver",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-    "format": "{:%d/%m/%Y - %H:%M:%S}"
+    "format": "{:%d - %H:%M}"
   },
   "network": {
     "format-wifi": "󰤢 ",
@@ -61,11 +61,14 @@
     "format": ""
   },
     "custom/stream_status": {
-        "format": "{text}",
+        "format": "<span class='text'>{text}</span>"
         "exec": "~/.local/scripts/stream_status",
         "interval": 5,
         "return-type": "json",
         "tooltip": true
+    },
+    "later": {
+        "format": "<span class='icon'>{icon}</span> <span class='text'>{text}</span>"
     }
 
 }
