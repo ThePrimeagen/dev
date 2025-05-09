@@ -61,7 +61,7 @@
     "format": ""
   },
     "custom/stream_status": {
-        "format": "<span class='text'>{text}</span>"
+        "format": "{text}",
         "exec": "~/.local/scripts/stream_status",
         "interval": 5,
         "return-type": "json",

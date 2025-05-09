@@ -9,6 +9,6 @@ if [ $? -eq 0 ] && [ -n "$msg" ]; then
     echo $msg
 else
     # Display error if server is down or curl failed
-    echo "{\"icon\": \"✗\", \"text\": \"Down\", \"class\": \"down\"}"
+    echo "{\"text\": \"✗ - Down\", \"class\": \"down\"}"
 fi
 

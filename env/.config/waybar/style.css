@@ -54,15 +54,22 @@
 }
 
 #custom-stream_status {
-  background-color: #0000FF;
-}
-
-#custom-stream_status.down {
-  background-color: #FF0000;
+  background-color: #101010;
+  padding: 0.5rem 1rem;
+  margin: 5px 0;
+  border-radius: 0px 5px 5px 0px;
 }
 
 #custom-stream_status.up {
-  background-color: #00FF00;
+  color: #c3e88d;
+}
+
+#custom-stream_status.warning {
+  color: #ff9e64;
+}
+
+#custom-stream_status.down {
+  color: #ea999c;
 }
 
 #memory {
