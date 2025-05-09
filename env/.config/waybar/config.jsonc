@@ -1,17 +1,19 @@
 {
   "layer": "top",
   "position": "top",
-  "modules-left": ["hyprland/workspaces"],
+  "modules-left": [
+        "custom/stream_status",
+        "hyprland/workspaces"
+    ],
   "modules-center": ["clock"],
   "modules-right": [
     "pulseaudio",
-    "backlight",
     "battery",
     "network",
     "cpu",
     "memory",
     "tray",
-    "custom/lock",
+    "custom/lock"
   ],
   "hyprland/workspaces": {
     "format": "{name}: {icon}",
@@ -23,15 +25,6 @@
   "tray": {
     "icon-size": 21,
     "spacing": 10
-  },
-  "custom/music": {
-    "format": "  {}",
-    "escape": true,
-    "interval": 5,
-    "tooltip": false,
-    "exec": "playerctl metadata --format='{{ artist }} - {{ title }}'",
-    "on-click": "playerctl play-pause",
-    "max-length": 50
   },
   "clock": {
     "timezone": "America/Denver",
@@ -66,6 +59,14 @@
     "tooltip": false,
     "on-click": "sh -c '(sleep 0.5s; hyprlock)' & disown",
     "format": ""
-  }
+  },
+    "custom/stream_status": {
+        "format": "{text}",
+        "exec": "~/.local/scripts/stream_status",
+        "interval": 5,
+        "return-type": "json",
+        "tooltip": true
+    }
+
 }
 

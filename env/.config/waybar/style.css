@@ -46,10 +46,12 @@
 #cpu,
 #memory,
 #custom-lock,
+#custom-stream_status,
 #custom-power {
   background-color: #101010;
   padding: 0.5rem 1rem;
   margin: 5px 0;
+  border-radius: 0px 5px 5px 0px;
 }
 
 #memory {

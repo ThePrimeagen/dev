@@ -1,0 +1,30 @@
+#!/bin/bash
+
+# Check if PID is provided
+if [ -z "$1" ]; then
+    echo "Usage: $0 <PID>"
+    exit 1
+fi
+
+PID=$1
+
+# Verify if PID exists
+if ! ps -p "$PID" > /dev/null; then
+    echo "Error: Process with PID $PID does not exist."
+    exit 1
+fi
+
+# Get VmRSS from /proc/<PID>/status
+VMRSS=$(grep VmRSS /proc/"$PID"/status | awk '{print $2}')
+
+# Check if VmRSS was found
+if [ -z "$VMRSS" ]; then
+    echo "Error: Could not retrieve VmRSS for PID $PID."
+    exit 1
+fi
+
+# Convert to human-readable format (MB)
+VMRSS_MB=$(echo "scale=2; $VMRSS / 1024" | bc)
+
+echo "Process $PID VmRSS: $VMRSS kB ($VMRSS_MB MB)"
+

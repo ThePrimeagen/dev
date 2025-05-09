@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
-sudo pacman -S --noconfirm --needed gimp tldr go fzf rofi-wayland
+sudo pacman -S --noconfirm --needed gimp tldr go fzf rofi-wayland btop bc stylua
 go install github.com/air-verse/air@latest
 sudo pacman -S love --noconfirm --needed
 sudo pacman -S ttf-font-awesome waybar ttf-jetbrains-mono-nerd ttf-nerd-fonts-symbols
 sudo pacman -S hyprlock --noconfirm --needed
 sudo pacman -S ghostty
-sudo pacman -S hyprpaper
+sudo pacman -S hyprpaper hyprshot
 paru -Syu wlogout-git --noconfirm --needed
 
