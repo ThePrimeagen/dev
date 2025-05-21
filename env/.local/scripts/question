@@ -1,0 +1,6 @@
+#!/bin/bash
+user_input=$(rofi -dmenu -p "Question")
+if [ -n "$user_input" ]; then
+    cd ~/personal/eleven-streamer
+    go run ./cmd/question/main.go "$user_input"
+fi
