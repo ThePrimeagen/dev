@@ -70,6 +70,6 @@ addToPathFront $HOME/.local/zig true # some how zig-0.13 just keeps getting adde
 # thanks gt
 alias gt='NODE_OPTIONS="--no-deprecation" gt'
 
-source ~/.php_profile
-source ~/.config/envman/PATH.env
-source ~/.config/envman/load.sh
+# source ~/.php_profile
+# source ~/.config/envman/PATH.env
+# source ~/.config/envman/load.sh

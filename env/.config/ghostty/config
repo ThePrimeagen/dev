@@ -4,6 +4,7 @@ theme = rose-pine-moon
 background = 000000
 background-opacity = 0.85
 background-blur = false
+confirm-close-surface=false
 
 shell-integration-features = no-cursor,no-sudo,no-title
 gtk-titlebar = false
