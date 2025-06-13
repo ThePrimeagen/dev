@@ -4,3 +4,6 @@
 [submodule "tmux-sessionizer"]
 	path = tmux-sessionizer
 	url = git@github.com:ThePrimeagen/tmux-sessionizer.git
+[submodule "daydream"]
+	path = daydream
+	url = git@github.com:ThePrimeagen/daydream.git

@@ -1,0 +1,58 @@
+{
+  "data": {
+    "directory": ".opencode"
+  },
+  "providers": {
+    "openai": {
+      "apiKey": "your-api-key",
+      "disabled": false
+    },
+    "anthropic": {
+      "apiKey": "your-api-key",
+      "disabled": false
+    },
+    "groq": {
+      "apiKey": "your-api-key",
+      "disabled": false
+    },
+    "openrouter": {
+      "apiKey": "your-api-key",
+      "disabled": false
+    }
+  },
+  "agents": {
+    "primary": {
+      "model": "claude-3.7-sonnet",
+      "maxTokens": 5000
+    },
+    "task": {
+      "model": "claude-3.7-sonnet",
+      "maxTokens": 5000
+    },
+    "title": {
+      "model": "claude-3.7-sonnet",
+      "maxTokens": 80
+    }
+  },
+  "mcpServers": {
+    "example": {
+      "type": "stdio",
+      "command": "path/to/mcp-server",
+      "env": [],
+      "args": []
+    }
+  },
+  "lsp": {
+    "go": {
+      "disabled": false,
+      "command": "gopls"
+    }
+  },
+  "shell": {
+    "path": "/bin/zsh",
+    "args": ["-l"]
+  },
+  "debug": false,
+  "debugLSP": false
+}
+
