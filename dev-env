@@ -70,4 +70,13 @@ copy $DEV_ENV/env/.xprofile $HOME/.xprofile
 copy $DEV_ENV/env/.tmux-sessionizer $HOME/.tmux-sessionizer
 copy $DEV_ENV/dev-env $HOME/.local/scripts/dev-env
 
+# build daydream's client and server
+pushd $DEV_ENV/daydream &> /dev/null
+./build
+popd &> /dev/null
+
+mkdir -p $HOME/.local/bin
+copy $DEV_ENV/daydream/opencode-client $HOME/.local/bin/opencode-client
+copy $DEV_ENV/daydream/opencode-server $HOME/.local/bin/opencode-server
+
 hyprctl reload
