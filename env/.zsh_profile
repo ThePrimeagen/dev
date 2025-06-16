@@ -24,8 +24,10 @@ dev_env() {
 
 # Where should I put you?
 bindkey -s ^f "tmux-sessionizer\n"
-bindkey -s '\eo' "opencode-sessionizer\n"
-bindkey -s '\ee' "opencode-sessionizer peek\n"
+bindkey -s '\eh' "tmux-sessionizer -w one\n"
+bindkey -s '\et' "tmux-sessionizer -w two\n"
+bindkey -s '\en' "tmux-sessionizer -w three\n"
+bindkey -s '\es' "tmux-sessionizer -w four\n"
 
 catr() {
     tail -n "+$1" $3 | head -n "$(($2 - $1 + 1))"
