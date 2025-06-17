@@ -14,3 +14,5 @@ curl -so /tmp/img.png $url
 ascii-image-converter -W 120 --color /tmp/img.png
 
 
+# wait for user to press enter
+read -p "Press enter to continue..."

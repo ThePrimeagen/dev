@@ -1,0 +1,54 @@
+#!/usr/bin/env bash
+
+# Check if arguments are provided
+if [ $# -lt 1 ] || [ $# -gt 3 ]; then
+    echo "Usage: $0 <ascii_frames_directory> [fps] [start_frame_index]"
+    exit 1
+fi
+
+FRAMES_DIR="$1"
+FPS=${2:-15}  # Default to 10 fps if not provided
+START_INDEX=${3:-0}  # Default to 0 (first frame) if not provided
+
+# Validate directory
+if [ ! -d "$FRAMES_DIR" ]; then
+    echo "Error: Directory '$FRAMES_DIR' does not exist."
+    exit 1
+fi
+
+# Validate start index is a non-negative integer
+if ! [[ "$START_INDEX" =~ ^[0-9]+$ ]]; then
+    echo "Error: Start frame index must be a non-negative integer."
+    exit 1
+fi
+
+# Calculate sleep duration between frames (in seconds)
+SLEEP_DURATION=$(bc -l <<< "1 / $FPS")
+
+FRAME_FILES=($(find "$FRAMES_DIR" -type f | sort))
+
+if [ ${#FRAME_FILES[@]} -eq 0 ]; then
+    echo "Error: No files found in '$FRAMES_DIR'."
+    exit 1
+fi
+
+# Check if start index is within bounds
+if [ "$START_INDEX" -ge "${#FRAME_FILES[@]}" ]; then
+    echo "Error: Start frame index ($START_INDEX) is out of bounds. Only ${#FRAME_FILES[@]} frames available."
+    exit 1
+fi
+
+# Clear terminal (ANSI escape code)
+printf "\033[2J\033[H"
+
+# Loop through frames starting from START_INDEX
+for ((i = START_INDEX; i < ${#FRAME_FILES[@]}; i++)); do
+    FRAME="${FRAME_FILES[$i]}"
+    # Move cursor to top-left (ANSI escape code)
+    printf "\033[H"
+    # Display frame
+    cat "$FRAME"
+    # Wait for the next frame
+    sleep "$SLEEP_DURATION"
+done
+

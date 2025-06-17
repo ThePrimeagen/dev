@@ -1,9 +1,16 @@
 #!/usr/bin/env bash
 
-mkdir -p ascii/imgs
-mkdir -p ascii/frames
-ffmpeg -i $1 -vf fps=10 ascii/imgs/frame_%04d.png
-for i in ascii/imgs/*.png; do
+if [[ $# -ne 1 && $# -ne 2 ]]; then
+    echo "Usage: $0 <video_file> <optional_output_dir>"
+    exit 1
+fi
+
+output_dir=${2:-"ascii"}
+
+mkdir -p $output_dir/imgs
+mkdir -p $output_dir/frames
+ffmpeg -i $1 -vf fps=10 $output_dir/imgs/frame_%04d.png
+for i in $output_dir/imgs/*.png; do
     base=$(basename "$i" .png)
-    jp2a --width=80 --output=ascii/frames/$base "$i"
+    jp2a --width=120 --color --output=$output_dir/frames/$base "$i"
 done
