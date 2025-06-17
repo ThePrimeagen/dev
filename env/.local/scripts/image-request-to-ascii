@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+source ~/.env
+
+read -p "Image: " prompt
+
+curl -so /tmp/img-request https://api.openai.com/v1/images/generations \
+  -H "Authorization: Bearer $OPENAI_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d "{\"prompt\": \"$prompt\", \"n\": 1, \"size\": \"1024x1024\"}"
+
+url=$(cat /tmp/img-request | jq -r '.data[0].url')
+curl -so /tmp/img.png $url
+ascii-image-converter -W 120 --color /tmp/img.png
+
+

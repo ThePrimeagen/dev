@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+mkdir -p ascii/imgs
+mkdir -p ascii/frames
+ffmpeg -i $1 -vf fps=10 ascii/imgs/frame_%04d.png
+for i in ascii/imgs/*.png; do
+    base=$(basename "$i" .png)
+    jp2a --width=80 --output=ascii/frames/$base "$i"
+done
