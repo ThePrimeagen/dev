@@ -18,9 +18,3 @@ git commit -m 'automated dev commit'
 git push
 popd
 
-pushd ~/personal/dev/daydream
-git add .
-git commit -m 'automated dev commit'
-git push
-popd
-
