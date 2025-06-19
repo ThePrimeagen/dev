@@ -11,8 +11,8 @@ curl -so /tmp/img-request https://api.openai.com/v1/images/generations \
 
 url=$(cat /tmp/img-request | jq -r '.data[0].url')
 curl -so /tmp/img.png $url
+curl -H 'x-admin: foofoo' -X POST -d '{"type": "play", "data": {"msg": "Image is ready my sweet prime a gen", "name": "theprimeagen", "id": 69}}' http://localhost:42069/cmd
 ascii-image-converter -W 120 --color /tmp/img.png
-
 
 # wait for user to press enter
 read -p "Press enter to continue..."
