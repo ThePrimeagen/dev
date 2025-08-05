@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+curl -H 'x-admin: foofoo' -X POST -d "{\"type\": \"play\", \"data\": {\"msg\": \"!randall $1\", \"name\": \"theprimeagen\", \"id\": 69}}" http://localhost:42069/cmd
+
