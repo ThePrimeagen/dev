@@ -15,3 +15,4 @@ curl -sSfL https://get.tur.so/install.sh | bash
 # cloudflare stuff
 paru -S cloudflared
 paru -S dosfstools
+paru -S arp-scan avahi nss-mdns
