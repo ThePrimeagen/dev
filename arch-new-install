@@ -6,9 +6,9 @@ cp -r env/.config/tmux ~/.config/tmux
 cp -r env/.local ~/.local
 
 mkdir -p ~/.local/scripts
-cp $DEV_ENV/tmux-sessionizer/tmux-sessionizer $HOME/.local/scripts/tmux-sessionizer
-cp $DEV_ENV/env/.zsh_profile $HOME/.zsh_profile
-cp $DEV_ENV/env/.zshrc $HOME/.zshrc
-cp $DEV_ENV/env/.xprofile $HOME/.xprofile
-cp $DEV_ENV/env/.tmux-sessionizer $HOME/.tmux-sessionizer
-cp $DEV_ENV/dev-env $HOME/.local/scripts/dev-env
+cp ./tmux-sessionizer/tmux-sessionizer $HOME/.local/scripts/tmux-sessionizer
+cp ./env/.zsh_profile $HOME/.zsh_profile
+cp ./env/.zshrc $HOME/.zshrc
+cp ./env/.xprofile $HOME/.xprofile
+cp ./env/.tmux-sessionizer $HOME/.tmux-sessionizer
+cp ./dev-env $HOME/.local/scripts/dev-env
