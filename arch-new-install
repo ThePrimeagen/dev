@@ -1,14 +1,6 @@
 #/usr/bin/env bash
 
-rm -rf ~/.config/nvim
-cp -r env/.config/nvim ~/.config/nvim
-cp -r env/.config/tmux ~/.config/tmux
-cp -r env/.local ~/.local
-
-mkdir -p ~/.local/scripts
-cp ./tmux-sessionizer/tmux-sessionizer $HOME/.local/scripts/tmux-sessionizer
-cp ./env/.zsh_profile $HOME/.zsh_profile
-cp ./env/.zshrc $HOME/.zshrc
-cp ./env/.xprofile $HOME/.xprofile
-cp ./env/.tmux-sessionizer $HOME/.tmux-sessionizer
-cp ./dev-env $HOME/.local/scripts/dev-env
+DEV_ENV=$(pwd) ./run neovim
+DEV_ENV=$(pwd) ./run dev
+DEV_ENV=$(pwd) ./run zsh
+DEV_ENV=$(pwd) ./run tmux
