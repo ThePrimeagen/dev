@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+#### THANKS TO PRIMEAGEN THIS PLAYS IN MY HEAD WHEN I CHMOD
+##   PASSING THE HEADWORM ALONG (IS IT EARWORM????) 
+
+script_dir=$(cd $(dirname "${BASH_SOURCE[0]}") && pwd)
+file_dir=$HOME/.local/share/chmon
+shamon="ffplay $file_dir/chmon.mp4 -autoexit -x 640 -left 50 -top 100 -loglevel quiet -hide_banner"
+### shorten to single shamon
+short=" -t 00:00:1.2"
+### hide video
+short+=" -nodisp"
+
+if [ $# -eq 0 ]; then
+#####  SHOW CHMON IF NO FILE/DIR
+  $shamon
+else
+  shamon+=$short
+  $shamon
+  while [ $# -gt 0 ]; do
+    if [ -f $1 ] || [ -d $1 ]; then	
+      chmod +x $1
+    fi
+    shift
+  done
+fi
