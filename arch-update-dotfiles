@@ -3,6 +3,8 @@
 rm -rf ~/.config/nvim
 cp -r env/.config/nvim ~/.config/nvim
 cp -r env/.config/tmux ~/.config/tmux
+cp -r env/.config/rofi ~/.config/rofi
+cp -r env/.config/hypr ~/.config/hypr
 cp -r env/.local ~/.local
 
 mkdir -p ~/.local/scripts
