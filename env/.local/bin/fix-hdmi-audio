@@ -1,0 +1,106 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+card_name="alsa_card.pci-0000_c1_00.1"
+profile_index=1
+preferred_hdmi_label="HDMI1"
+
+if ! command -v wpctl >/dev/null 2>&1; then
+  echo "wpctl not found; install wireplumber tools." >&2
+  exit 1
+fi
+
+if ! command -v pw-dump >/dev/null 2>&1; then
+  echo "pw-dump not found; install pipewire." >&2
+  exit 1
+fi
+
+card_id=$(wpctl status | awk -v name="$card_name" '
+  $1 ~ /^[0-9]+\.$/ {id=$1; sub("\.", "", id)}
+  $0 ~ name {print id; exit}
+')
+
+if [[ -z "${card_id:-}" ]]; then
+  echo "Could not find HDMI card: $card_name" >&2
+  exit 1
+fi
+
+wpctl set-profile "$card_id" "$profile_index"
+
+pw_dump=$(mktemp)
+trap 'rm -f "$pw_dump"' EXIT
+pw-dump > "$pw_dump"
+
+sink_id=$(python - <<'PY'
+import json
+import sys
+
+card_id = int(sys.argv[1])
+preferred = sys.argv[2]
+
+with open(sys.argv[3]) as f:
+    data = json.load(f)
+
+sinks = []
+for obj in data:
+    if isinstance(obj, dict) and obj.get('type') == 'PipeWire:Interface:Node':
+        props = obj.get('info', {}).get('props', {})
+        if props.get('media.class') == 'Audio/Sink' and props.get('device.id') == card_id:
+            sinks.append((obj.get('id'), props.get('node.name', ''), props.get('node.description', '')))
+
+preferred_id = None
+for sink in sinks:
+    if preferred in sink[1] or preferred in sink[2]:
+        preferred_id = sink[0]
+        break
+
+if preferred_id is None and sinks:
+    preferred_id = sinks[0][0]
+
+if preferred_id is None:
+    sys.exit(2)
+
+print(preferred_id)
+PY
+"$card_id" "$preferred_hdmi_label" "$pw_dump")
+
+if [[ -z "${sink_id:-}" ]]; then
+  echo "No HDMI sinks found after profile change." >&2
+  exit 1
+fi
+
+wpctl set-default "$sink_id"
+
+route_index=$(python - <<'PY'
+import json
+import sys
+
+card_id = int(sys.argv[1])
+preferred = sys.argv[2]
+
+with open(sys.argv[3]) as f:
+    data = json.load(f)
+
+route_index = None
+for obj in data:
+    if isinstance(obj, dict) and obj.get('type') == 'PipeWire:Interface:Device' and obj.get('id') == card_id:
+        params = obj.get('info', {}).get('params', {})
+        for route in params.get('EnumRoute', []):
+            if route.get('available') == 'yes' and preferred in route.get('description', ''):
+                route_index = route.get('index')
+                break
+        break
+
+if route_index is not None:
+    print(route_index)
+PY
+"$card_id" "$preferred_hdmi_label" "$pw_dump")
+
+if [[ -n "${route_index:-}" ]]; then
+  wpctl set-route "$card_id" "$route_index" || true
+fi
+
+wpctl status | awk -v id="$sink_id" '
+  $1 ~ /^[0-9]+\.$/ {current=$1; sub("\.", "", current)}
+  current == id {print "Default HDMI sink set:", $0}
+'
