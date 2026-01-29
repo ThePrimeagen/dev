@@ -6,7 +6,8 @@ pushd ~/paru
 makepkg -si
 popd
 
-paru -S --noconfirm --needed gimp tldr go fzf rofi-wayland btop bc stylua node npm
+paru -S --noconfirm --needed gimp tldr go fzf rofi-wayland btop bc stylua bun
+paru -S --noconfirm cursor-bin cursor-cli
 go install github.com/air-verse/air@latest
 paru -S love --noconfirm --needed
 paru -S ttf-font-awesome waybar ttf-jetbrains-mono-nerd ttf-nerd-fonts-symbols --noconfirm
