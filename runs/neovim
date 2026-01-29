@@ -9,17 +9,18 @@ rm -rf $HOME/personal/vim-arcade
 rm -rf $HOME/personal/unnamed_game_1
 rm -rf $HOME/personal/plenary.nvim
 
-git clone https://github.com/ThePrimeagen/harpoon.git $HOME/personal/harpoon
+git clone git@github.com:ThePrimeagen/harpoon.git $HOME/personal/harpoon
 cd $HOME/personal/harpoon
 git fetch
 git checkout harpoon2
 
-git clone https://github.com/ThePrimeagen/vim-apm.git $HOME/personal/vim-apm
-git clone https://github.com/ThePrimeagen/vim-with-me.git $HOME/personal/vim-with-me
-git clone https://github.com/ThePrimeagen/vim-arcade.git $HOME/personal/vim-arcade
-git clone https://github.com/ThePrimeagen/caleb.git $HOME/personal/caleb
-git clone https://github.com/Terminaldotshop/the-stru.git $HOME/personal/the-stru
+git clone git@github.com:ThePrimeagen/vim-apm.git $HOME/personal/vim-apm
+git clone git@github.com:ThePrimeagen/vim-with-me.git $HOME/personal/vim-with-me
+git clone git@github.com:ThePrimeagen/vim-arcade.git $HOME/personal/vim-arcade
+git clone git@github.com:ThePrimeagen/caleb.git $HOME/personal/caleb
+git clone git@github.com:ThePrimeagen/99 $HOME/personal/99
+git clone git@github.com:Terminaldotshop/the-stru.git $HOME/personal/the-stru
 git clone git@github.com:Mordoria/unnamed_game_1.git $HOME/personal/unnamed_game_1
-git clone https://github.com/nvim-lua/plenary.nvim.git $HOME/personal/plenary.nvim
+git clone git@github.com:nvim-lua/plenary.nvim.git $HOME/personal/plenary.nvim
 
 sudo luarocks install luacheck
