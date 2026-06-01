@@ -52,6 +52,7 @@ addToPathFront() {
 addToPathFront $HOME/.zig
 addToPathFront $HOME/.local/.npm-global/bin
 addToPathFront $HOME/.local/odin
+addToPathFront $HOME/.local/jai/bin/
 addToPathFront $HOME/.local/apps
 addToPathFront $HOME/.local/scripts
 addToPathFront $HOME/.local/bin

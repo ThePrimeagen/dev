@@ -1,5 +1,7 @@
 #/usr/bin/env bash
 
+rm -rf ~/.local/bin/
+rm -rf ~/.local/scripts/
 rm -rf ~/.config/nvim
 rm -rf ~/.config/hypr
 rm -rf ~/.config/tmux
