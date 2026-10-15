@@ -78,3 +78,10 @@ alias gt='NODE_OPTIONS="--no-deprecation" gt'
 # source ~/.php_profile
 # source ~/.config/envman/PATH.env
 # source ~/.config/envman/load.sh
+
+# 3ds dev
+# FROM GROK
+# # optional but matches the wiki
+echo 'export DEVKITPRO=/opt/devkitpro
+export DEVKITARM=/opt/devkitpro/devkitARM
+export DEVKITPPC=/opt/devkitpro/devkitPPC' >> ~/.bashrc

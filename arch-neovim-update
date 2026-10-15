@@ -2,3 +2,5 @@
 
 rm -rf ~/.config/nvim
 cp -r env/.config/nvim ~/.config/nvim
+rm -rf ~/.config/tmux
+cp -r env/.config/tmux ~/.config/tmux
